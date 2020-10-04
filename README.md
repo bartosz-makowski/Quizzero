@@ -72,7 +72,7 @@ The icons used are self explanatory so that the user does not need to struggle t
 
 **Colours**
 
-Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here](url).
+Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here](https://github.com/bartosz-makowski/Quizzero/blob/master/assets/wireframes/colorpalette.png).
 
 **Colours used**
 * #FAFAFA - Cultured - used for the background
@@ -84,7 +84,7 @@ Using learned knowledge from prior research, bright and vibrant colours have a h
 **Sounds**
 
 ## Wireframes :straight_ruler:
-I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](url).
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](https://github.com/bartosz-makowski/Quizzero/tree/master/assets/wireframes).
 
 ## Features :abacus:
 **Features that have been developed:**
