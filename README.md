@@ -72,10 +72,14 @@ The icons used are self explanatory so that the user does not need to struggle t
 
 **Colours**
 
-Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](url). Screenshot of the colour palette has been added to the wireframes folder [here](url).
+Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here](url).
 
 **Colours used**
-
+* #FAFAFA - Cultured - used for the background
+* #000000 - Black - used for text to achieve a good contrast
+* #FF7F11 - Amber SAE ECE - used to highlight buttons
+* #EF2D56 - Red Crayola - used to highlight wrong answer
+* #2FBF71 - Emerald - used to highlight correct answer
 
 **Sounds**
 
