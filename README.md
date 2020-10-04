@@ -1,41 +1,162 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+## Contents:book:
+### UX:superhero_man:	
+  * **Project Goals** :jigsaw:	
+  * **Target Audience Goals** 	:dart:
+  * **Site Owner Goals**  	:dart:
+  * **User Requirements and Expectations** 	:dart:
+  * **Design Choices** :framed_picture:		
+    * Fonts
+    * Icons
+    * Colours
+    * Sounds
+  * **Wireframes** :straight_ruler:		
+  * **Features** :abacus:	
+    * Features that have been developed
+    * Features that will be implemented in the future
+  * **Technologies Used** :computer:	
+    * Languages
+    * Tools & Libraries
+  * **Testing** :magnet:
+  * **Bugs** :mosquito:
+  * **Deployment** :surfer:
+  * **Acknowledgements** :clap:
+  
+## UX ( User Experience)
+### Project Goals :jigsaw:	
+The goal of this project is to provide the users with a fun and interactive quiz game. The website needs to be visually appealing whilst providing a great User Experience to encourage users to visit it and play the game
 
-Welcome USER_NAME,
+### User Goals :jigsaw: 
+* Ability to input your name
+* Ability to choose from different question categories
+* Ability to see the best score
+* Ability to see the final score
+* Visual feedback when correct answer is chosen
+* Visual feedback when incorrect answer is chosen
+* Visual and sound interaction and feedback
+* Interact with the website on both Desktop tablet and mobile
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+## User stories 	:dart:
+* As a user I expect to type my name before starting the game
+* As a user I want to be able to select a category of my questions
+* As a user I want to be able to see when I choose the correct answer
+* As a user I expect to hear a sound when incorrect answer is pressed
+* As a user I expect to check my final score and my best score in the game session
 
-## Gitpod Reminders
+## Site Owner Goals	:dart:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* Create a fun experience for the users
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+## User Requirements and Expectations 	:dart:
 
-Another blue button should appear to click: *Open Browser*.
+* **Requirements**
+  * Navigate the website using the menu buttons and drop down selector
+  * Ability to play the game on desktop and mobile devices
+  * Contnent displayed in a visually appealing manor
+  
+* **Expectations**
+  * Content is visually satisfying and informative on all screen sizes
+  * No information overload
+  * Navigation takes user to specific parts of the website
+  
+## Design choices :framed_picture:	
+The theme of this project is *game*, therefore my design choices are heavily influenced by positive colours and motifs. Using the resources in [this blog](https://www.crazyegg.com/blog/colors-proven-to-boost-sales/) I was able to pick out a colour scheme that has been proven to boost sales/interaction with a web page. By using [this webpage](https://coolors.co/) I was able to macth colors for this projcet.
+  
+**Fonts**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here](url)
 
-A blue button should appear to click: *Make Public*,
+**Icons**
 
-Another blue button should appear to click: *Open Browser*.
+The icons used are self explanatory so that the user does not need to struggle to interpret what the icon will actually mean. I use the icon ‘bars’ from font-awesome icons, to display the classic ‘burger-button’ on tablet and mobile devices.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+**Colours**
 
-## Updates Since The Instructional Video
+Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](url). Screenshot of the colour palette has been added to the wireframes folder [here](url).
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+**Colours used**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+**Sounds**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Wireframes :straight_ruler:
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](url).
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Features :abacus:
+**Features that have been developed:**
+* Visible feedback when hover over buttons
+* Sound feedback when incorrect answer is pressed
+* Total score counter
+* Best score counter
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
---------
+**Features to be implemented in the future**
 
-Happy coding!
+
+## Technologies Used :computer:
+
+### Languages
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://www.w3schools.com/js/)
+
+### Tools & Libraries
+* [PopperJS](https://popper.js.org/)
+* [jQuery](https://jquery.com/)
+* [Git](https://git-scm.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Font-Awesome](https://fontawesome.com/icons?d=gallery)
+* [Google Maps](https://www.google.com/maps/)
+* [Google Fonts](https://fonts.google.com/)
+* [Balsamiq](https://balsamiq.com/)
+* [Picresize](https://picresize.com/)
+* [Favicon generator](https://realfavicongenerator.net/)
+* [AmIresponsive](http://ami.responsivedesign.is/) - used to generate multi screen view of the webiste on different devices
+
+
+### Testing :magnet:
+
+#### Plan
+
+
+#### Tests
+##### Using W3C Markup Validator
+###### Test 1
+* **Error:** 
+* **Solution:** 
+###### Test 2
+* **Warning:** 
+* **Solution** 
+
+### Bugs :mosquito:
+
+### Deployment :surfer:
+
+Quizzero was developed on GitPod, using git and GitHub to host the repository.
+
+When deploying Quizzero using GitHub Pages the following steps were made:
+
+* Opened up GitHub in the browser.
+* Signed in using username and password.
+* Selected my repositories.
+* Navigated to ``bartosz-makowski/Quizzero``.
+* In the top navigation clicked **'settings'**.
+* Scrolled down to the GitHub Pages area.
+* Selected **'Master Branch'** from the **'Source'** dropdown menu.
+* Clicked to confirm my selection.
+* Quizzero now live on GitHub Pages. :rocket: 
+
+#### Running Quizzero Locally
+
+Cloning Quizzero from GitHub:
+
+* Navigate to ``/bartosz-makowski/Quizzero``.
+* Click the green **'Clone or Download'** button.
+* Copy the url in the dropdown box.
+* Using your favourite IDE open up your preferred terminal.
+* Navigate to your desired file location.
+* Copy the following code and input it into your terminal to clone Quizzero.
+```
+https://github.com/bartosz-makowski/Quizzero.git
+```
+### Acknowledgements :clap:
