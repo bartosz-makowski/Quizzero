@@ -6,7 +6,7 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #fafafa;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 
@@ -14,6 +14,14 @@ body {
 
 
 #welcome-header {
-    text-align: center;
     font-size: 5rem;
+}
+
+
+#game-container {
+    height: 100vh;
+}
+
+#game-row {
+    height: 100vh;
 }
