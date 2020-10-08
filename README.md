@@ -64,7 +64,7 @@ The theme of this project is *game*, therefore my design choices are heavily inf
   
 **Fonts**
 
-I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here](url)
+I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here](https://github.com/bartosz-makowski/Quizzero/blob/master/assets/wireframes/colorpalette.png)
 
 **Colours**
 
@@ -80,7 +80,7 @@ Using learned knowledge from prior research, bright and vibrant colours have a h
 **Sounds**
 
 ## Wireframes :straight_ruler:
-I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](url).
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](https://github.com/bartosz-makowski/Quizzero/tree/master/assets/wireframes).
 
 ## Features :abacus:
 **Features that have been developed:**
