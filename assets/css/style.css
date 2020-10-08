@@ -25,3 +25,22 @@ body {
 #game-row {
     height: 100vh;
 }
+
+
+#button-start {
+    background-color: #FF7F11;
+    border-radius: 5px;
+    border: 1px solid #FF8011C5;
+    padding: 30px 50px;
+    font-size: 2.3rem;
+    color: #000;
+}
+
+#button-start:hover {
+    background-color: #2FBF71;
+    border: 1px solid #2FBF71;
+}
+
+#button-start:focus {
+    outline: none;
+}
