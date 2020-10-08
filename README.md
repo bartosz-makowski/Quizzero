@@ -66,13 +66,9 @@ The theme of this project is *game*, therefore my design choices are heavily inf
 
 I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here](url)
 
-**Icons**
-
-The icons used are self explanatory so that the user does not need to struggle to interpret what the icon will actually mean. I use the icon ‘bars’ from font-awesome icons, to display the classic ‘burger-button’ on tablet and mobile devices.
-
 **Colours**
 
-Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here](https://github.com/bartosz-makowski/Quizzero/blob/master/assets/wireframes/colorpalette.png).
+Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here]().
 
 **Colours used**
 * #FAFAFA - Cultured - used for the background
@@ -84,7 +80,7 @@ Using learned knowledge from prior research, bright and vibrant colours have a h
 **Sounds**
 
 ## Wireframes :straight_ruler:
-I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](https://github.com/bartosz-makowski/Quizzero/tree/master/assets/wireframes).
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](url).
 
 ## Features :abacus:
 **Features that have been developed:**
@@ -110,7 +106,6 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * [Git](https://git-scm.com/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Font-Awesome](https://fontawesome.com/icons?d=gallery)
-* [Google Maps](https://www.google.com/maps/)
 * [Google Fonts](https://fonts.google.com/)
 * [Balsamiq](https://balsamiq.com/)
 * [Picresize](https://picresize.com/)
