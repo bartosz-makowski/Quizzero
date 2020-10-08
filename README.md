@@ -64,11 +64,11 @@ The theme of this project is *game*, therefore my design choices are heavily inf
   
 **Fonts**
 
-I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here](https://github.com/bartosz-makowski/Quizzero/blob/master/assets/wireframes/colorpalette.png)
+I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here]()
 
 **Colours**
 
-Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here]().
+Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here](https://github.com/bartosz-makowski/Quizzero/blob/master/assets/wireframes/colorpalette.png).
 
 **Colours used**
 * #FAFAFA - Cultured - used for the background
