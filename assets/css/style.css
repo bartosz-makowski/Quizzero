@@ -19,16 +19,12 @@ h2 {
 
 /* Welcome row */
 
-#game-container {
+.container-height {
     height: 100vh;
 }
 
 #welcome-header {
     font-size: 5rem;
-}
-
-#welcome-row {
-    height: 100vh;
 }
 
 
