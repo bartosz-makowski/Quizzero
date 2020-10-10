@@ -10,7 +10,7 @@ body {
 }
 
 
-/* Game container */
+/* Welcome row */
 
 
 #welcome-header {
@@ -27,9 +27,8 @@ body {
 }
 
 
-#button-anchor {
-    cursor: pointer;
-}
+/*Buttons*/
+
 
 #button-start {
     background-color: #FF7F11;
