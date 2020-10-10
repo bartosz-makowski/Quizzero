@@ -12,6 +12,9 @@ body {
 
 /* Welcome row */
 
+#game-container {
+    height: 100vh;
+}
 
 #welcome-header {
     font-size: 5rem;
@@ -25,11 +28,11 @@ body {
 
 /* question-row*/
 
-.question-row {
+#question-row {
     height: 50vh;
 }
 
-.answer-buttons {
+#answer-buttons {
     height: 50vh;
 }
 
@@ -87,4 +90,9 @@ body {
 
 .button-wrong {
     background-color: #EF2D56;
+}
+
+
+.hide {
+    display: none;
 }
