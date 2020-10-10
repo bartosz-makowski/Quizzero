@@ -17,7 +17,7 @@ h2 {
     font-size: 5rem;
 }
 
-/* Welcome row */
+/* Welcome */
 
 .container-height {
     height: 100vh;
@@ -28,13 +28,17 @@ h2 {
 }
 
 
-/* input row */
+/* input */
 
 
 sadf
 
 
-/* question-row*/
+/* question */
+
+#question {
+    margin-top: 70px;
+}
 
 #question-row {
     height: 50vh;
@@ -54,7 +58,7 @@ sadf
 }
 
 
-/*Buttons*/
+/* Buttons */
 
 
 .button {
