@@ -29,9 +29,16 @@ body {
 
 /* question-row*/
 
+
+#question-text {
+    font-size: 5rem;
+    padding: 50px;
+}
+
 .answers-grid {
     padding: 20px;
 }
+
 
 /*Buttons*/
 
@@ -61,4 +68,12 @@ body {
     padding: 30px 50px;
     font-size: 2.3rem;
     color: #000;
+}
+
+.button-correct {
+    backround-color: #2fbf71;
+}
+
+.button-wrong {
+    background-color: #EF2D56;
 }
