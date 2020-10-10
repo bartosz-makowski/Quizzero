@@ -22,10 +22,14 @@ body {
     height: 100vh;
 }
 
-#game-row {
+#welcome-row {
     height: 100vh;
 }
 
+
+#button-anchor {
+    cursor: pointer;
+}
 
 #button-start {
     background-color: #FF7F11;
