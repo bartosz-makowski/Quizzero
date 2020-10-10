@@ -18,10 +18,6 @@ body {
 }
 
 
-#game-container {
-    height: 100vh;
-}
-
 #welcome-row {
     height: 100vh;
 }
@@ -29,6 +25,13 @@ body {
 
 /* question-row*/
 
+.question-row {
+    height: 50vh;
+}
+
+.answer-buttons {
+    height: 50vh;
+}
 
 #question-text {
     font-size: 5rem;
@@ -79,7 +82,7 @@ body {
 }
 
 .button-correct {
-    backround-color: #2fbf71;
+    background-color: #2fbf71;
 }
 
 .button-wrong {
