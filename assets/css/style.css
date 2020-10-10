@@ -27,6 +27,12 @@ body {
 }
 
 
+/* question-row*/
+
+.answers-grid {
+    padding: 20px;
+}
+
 /*Buttons*/
 
 
@@ -46,4 +52,13 @@ body {
 
 #button-start:focus {
     outline: none;
+}
+
+.anwser-button {
+    background-color: #FF7F11;
+    border: 1px solid #FF8011C5;
+    border-radius: 5px;
+    padding: 30px 50px;
+    font-size: 2.3rem;
+    color: #000;
 }
