@@ -70,6 +70,14 @@ body {
     color: #000;
 }
 
+.anwser-button:hover {
+    background-color: #ff8011c5;
+}
+
+.anwser-button:focus {
+    outline: none;
+}
+
 .button-correct {
     backround-color: #2fbf71;
 }
