@@ -27,7 +27,6 @@ h2 {
     font-size: 5rem;
 }
 
-
 #welcome-row {
     height: 100vh;
 }
@@ -54,7 +53,7 @@ sadf
     padding: 50px;
 }
 
-.answers-grid {
+.grid {
     padding: 20px;
 }
 
