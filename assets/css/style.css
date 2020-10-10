@@ -49,7 +49,7 @@ body {
 /*Buttons*/
 
 
-#button-start {
+.button {
     background-color: #FF7F11;
     border-radius: 5px;
     border: 1px solid #FF8011C5;
@@ -58,29 +58,12 @@ body {
     color: #000;
 }
 
-#button-start:hover {
-    background-color: #2FBF71;
-    border: 1px solid #2FBF71;
-}
 
-#button-start:focus {
-    outline: none;
-}
-
-.anwser-button {
-    background-color: #FF7F11;
-    border: 1px solid #FF8011C5;
-    border-radius: 5px;
-    padding: 30px 50px;
-    font-size: 2.3rem;
-    color: #000;
-}
-
-.anwser-button:hover {
+.button:hover {
     background-color: #ff8011c5;
 }
 
-.anwser-button:focus {
+.button:focus {
     outline: none;
 }
 
