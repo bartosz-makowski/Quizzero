@@ -17,6 +17,10 @@ h2 {
     font-size: 5rem;
 }
 
+h3 {
+    font-size: 4rem;
+}
+
 .container-height {
     height: 100vh;
 }
