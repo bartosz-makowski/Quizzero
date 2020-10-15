@@ -25,6 +25,7 @@ startButton.addEventListener('click', start)
 
 function start() {
     welcome.classList.add('hide')
+    input.classList.remove('hide')
 }
 
 
@@ -41,5 +42,6 @@ restartButton.addEventListener('click', restart)
 function restart() {
     finalScore.classList.add('hide')
     input.classList.remove('hide')
+    question.classList.add('hide')
 }
 
