@@ -15,7 +15,7 @@
 
 <!-- welcome -->
     <section class="container-fluid container-height" id="welcome">
-        <div class="row justify-content-center container-height" id="welcome-row">
+        <div class="row justify-content-center container-height">
             <div class="col-12 text-center align-self-center">
                 <h1>Welcome to the QUIZZERO</h1>
             </div>
@@ -25,7 +25,7 @@
         </div>
     </section>
 
-<!--Input -->
+<!-- Input -->
 
     <section class="container-fluid container-height" id="input">
         <div class="row justify-content-center container-height">
@@ -47,8 +47,8 @@
                     <option value="d">d</option>
                 </select>
             </div>
-            <div class="col-12 text-center align-self-center answers-grid">
-                <button type="button" class="button" id="button-continue">Let's Start</button>
+            <div class="col-12 text-center align-self-center grid">
+                <button type="button" class="button" id="button-continue">Start</button>
             </div>
         </div>
     </section>
@@ -64,17 +64,38 @@
         </div>
         <div class="row justify-content-center" id="answer-buttons">
                 <div class="col-6 text-center align-self-center grid">
-                    <button type="button" class="button">Answer 1</button>
+                    <button type="button" class="button" id="answer-1">Answer 1</button>
                 </div>
                 <div class="col-6 text-center align-self-center grid">
-                    <button type="button" class="button">Answer 2</button>
+                    <button type="button" class="button" id="answer-2">Answer 2</button>
                 </div>
                 <div class="col-6 text-center align-self-center grid">
-                    <button type="button" class="button">Answer 3</button>
+                    <button type="button" class="button" id="answer-3">Answer 3</button>
                 </div>
                 <div class="col-6 text-center align-self-center grid">
-                    <button type="button" class="button">Answer 4</button>
+                    <button type="button" class="button" id="answer-4">Answer 4</button>
                 </div>
+        </div>
+    </section>
+<!-- Final score -->
+    <section class="container-fluid container-height" id="score">
+        <div class="row justify-content-around align-items-center">
+            <div class="col-12 text-center align-self-center">
+                <h1>Final Score</h1>
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center">
+            <div class="col-xs-12 col-md-6 text-center">
+                <h3>Total score:</h3>
+                <h2>0</h2>
+            </div>
+            <div class="col-xs-12 col-md-6 text-center">
+                <h3>Best Score:</h3>
+                <h2>0</h2>
+            </div>
+        </div>
+        <div class="col-12 text-center align-self-center grid">
+            <button type="button" class="button" id="button-restart">Start again</button>
         </div>
     </section>
 
