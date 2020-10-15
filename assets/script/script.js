@@ -1,3 +1,6 @@
+// Buttons consts
+
+
 const startButton = document.getElementById('button-start')
 const continueButton = document.getElementById('button-continue')
 const answer1 = document.getElementById('answer1')
@@ -6,11 +9,14 @@ const answer3 = document.getElementById('answer3')
 const answer4 = document.getElementById('answer4')
 const buttonRestart = document.getElementById('button-restart')
 
-answer2.addEventListener('click', test)
-answer3.addEventListener('click', test)
-buttonRestart.addEventListener('click', test)
+// Sections consts
 
 
-function test() {
-    console.log('works hahah!')
-}
+const welcome = document.getElementById('welcome')
+const input = document.getElementById('input')
+const question = document.getElementById('question')
+const finalScore = document.getElementById('score')
+
+
+// Functions
+
