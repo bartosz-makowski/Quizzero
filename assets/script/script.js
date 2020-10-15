@@ -32,6 +32,7 @@ continueButton.addEventListener('click', begin)
 
 function begin() {
     input.classList.add('hide')
+    question.classList.remove('hide')
 }
 
 
