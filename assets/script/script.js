@@ -18,6 +18,16 @@ const question = document.getElementById('question')
 const finalScore = document.getElementById('score')
 
 
+// Questions
+
+let questionNumber = document.getElementById('question-number')
+let questionText = document.getElementById('question-text')
+const answers = Array.from(document.getElementsByClassName('answer-text'))
+
+console.log(answers)
+
+
+
 // Functions
 
 
