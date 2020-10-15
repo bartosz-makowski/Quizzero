@@ -21,6 +21,11 @@ h2 {
     height: 100vh;
 }
 
+.container-margin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 
 /* Welcome */
 

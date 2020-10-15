@@ -14,7 +14,7 @@
     
 
 <!-- welcome -->
-    <section class="container-fluid container-height" id="welcome">
+    <section class="container-fluid container-height container-margin" id="welcome">
         <div class="row justify-content-center container-height">
             <div class="col-12 text-center align-self-center">
                 <h1>Welcome to the QUIZZERO</h1>
@@ -27,7 +27,7 @@
 
 <!-- Input -->
 
-    <section class="container-fluid container-height" id="input">
+    <section class="container-fluid container-height container-margin" id="input">
         <div class="row justify-content-center container-height">
             <div class="col-12 text-center align-self-center grid">
                 <h1>Quizzero</h1>
@@ -55,14 +55,14 @@
 
 <!-- question -->
 
-    <section class="container-fluid container-height" id="question">
+    <section class="container-fluid container-height container-margin" id="question">
         <div class="row justify-content-around align-items-center" id="question-row">
             <div class="col-12 text-center align-self-center">
                 <h1 id="question-number">1</h1>
                 <h1 id="question-text">What is the question ?</h1>
             </div>
         </div>
-        <div class="row justify-content-center" id="answer-buttons">
+        <div class="row justify-content-center container-margin" id="answer-buttons">
                 <div class="col-6 text-center align-self-center grid">
                     <button type="button" class="button" id="answer-1">Answer 1</button>
                 </div>
@@ -78,25 +78,23 @@
         </div>
     </section>
 <!-- Final score -->
-    <section class="container-fluid container-height" id="score">
-        <div class="row justify-content-around align-items-center">
+    <section class="container-fluid container-height container-margin" id="score">
+        <div class="row justify-content-center container-height align-items-center">
             <div class="col-12 text-center align-self-center">
                 <h1>Final Score</h1>
             </div>
+        <div class="col-xs-12 col-md-6 text-center align-self-center">
+            <h3>Total score:</h3>
+            <h2>0</h2>
         </div>
-        <div class="row justify-content-around align-items-center">
-            <div class="col-xs-12 col-md-6 text-center">
-                <h3>Total score:</h3>
-                <h2>0</h2>
-            </div>
-            <div class="col-xs-12 col-md-6 text-center">
-                <h3>Best Score:</h3>
-                <h2>0</h2>
-            </div>
+        <div class="col-xs-12 col-md-6 text-center align-self-center">
+            <h3>Best Score:</h3>
+            <h2>0</h2>
         </div>
-        <div class="col-12 text-center align-self-center grid">
+        <div class="col-12 text-center align-self-center">
             <button type="button" class="button" id="button-restart">Start again</button>
         </div>
+    </div>
     </section>
 
 <script src="assets/script/script.js"></script>
