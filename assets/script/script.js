@@ -20,3 +20,9 @@ const finalScore = document.getElementById('score')
 
 // Functions
 
+startButton.addEventListener('click', start)
+
+function start() {
+    welcome.classList.add('hide')
+}
+
