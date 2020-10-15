@@ -7,7 +7,7 @@ const answer1 = document.getElementById('answer1')
 const answer2 = document.getElementById('answer2')
 const answer3 = document.getElementById('answer3')
 const answer4 = document.getElementById('answer4')
-const buttonRestart = document.getElementById('button-restart')
+const restartButton = document.getElementById('button-restart')
 
 // Sections consts
 
@@ -34,4 +34,11 @@ function begin() {
     input.classList.add('hide')
 }
 
+
+restartButton.addEventListener('click', restart)
+
+function restart() {
+    finalScore.classList.add('hide')
+    input.classList.remove('hide')
+}
 
