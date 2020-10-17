@@ -24,7 +24,7 @@ let questionNumber = document.getElementById('question-number')
 let questionText = document.getElementById('question-text')
 const answers = Array.from(document.getElementsByClassName('answer-text'))
 
-console.log(answers)
+
 
 
 
@@ -44,6 +44,7 @@ continueButton.addEventListener('click', begin)
 function begin() {
     input.classList.add('hide')
     question.classList.remove('hide')
+    newQuestion()
 }
 
 
@@ -55,3 +56,31 @@ function restart() {
     question.classList.add('hide')
 }
 
+function newQuestion() {
+
+}
+
+
+
+//temporary questions to test functionality before adding API
+
+const questions = [
+    {
+      question: 'What is 2 + 2',
+      answers: [
+          { text: '4', correct: true, },
+          { text: '6', correct: false, },
+          { text: '0', correct: false},
+          { text: '22', correct: false},
+      ]
+    },
+    {
+        question: 'How many months do we have in a year',
+        answers: [
+            { text: '18', correct: false},
+            { text: '12', correct: true},
+            { text: '10', correct: false},
+            { text: '24', correct: false},
+        ]
+    }
+]
