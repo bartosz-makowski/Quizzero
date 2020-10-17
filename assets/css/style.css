@@ -47,7 +47,7 @@ h3 {
 }
 
 #answer-buttons {
-    height: 50vh;
+    max-height: 50vh;
 }
 
 #question-text {

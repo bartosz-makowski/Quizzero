@@ -7,6 +7,7 @@ const answer1 = document.getElementById('answer1')
 const answer2 = document.getElementById('answer2')
 const answer3 = document.getElementById('answer3')
 const answer4 = document.getElementById('answer4')
+const answerButtons = document.getElementById('answer-buttons')
 const restartButton = document.getElementById('button-restart')
 
 // Sections consts
@@ -22,7 +23,7 @@ const finalScore = document.getElementById('score')
 
 let questionNumber = document.getElementById('question-number')
 let questionText = document.getElementById('question-text')
-const answers = Array.from(document.getElementsByClassName('answer-text'))
+//const answers = Array.from(document.getElementsByClassName('answer-text'))
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -62,15 +63,23 @@ function newQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+
+
 function showQuestion(question) {
-    questionText.innerText = questions.question
+    questionText.innerText = question.question
+    question.answers.forEach(answer => {
+        let button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('button')
+        answerButtons.appendChild(button)
+    });
 }
 
 
 
 //temporary questions to test functionality before adding API
 
-const questions = [
+let questions = [
     {
       question: 'What is 2 + 2',
       answers: [
@@ -89,4 +98,4 @@ const questions = [
             { text: '24', correct: false},
         ]
     }
-]
+];
