@@ -24,7 +24,7 @@ let questionNumber = document.getElementById('question-number')
 let questionText = document.getElementById('question-text')
 const answers = Array.from(document.getElementsByClassName('answer-text'))
 
-
+let shuffledQuestions, currentQuestionIndex
 
 
 
@@ -44,6 +44,8 @@ continueButton.addEventListener('click', begin)
 function begin() {
     input.classList.add('hide')
     question.classList.remove('hide')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
     newQuestion()
 }
 
@@ -57,7 +59,11 @@ function restart() {
 }
 
 function newQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+}
 
+function showQuestion(question) {
+    questionText.innerText = questions.question
 }
 
 
