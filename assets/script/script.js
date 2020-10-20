@@ -26,3 +26,24 @@ let questions = [
         answer: 4,
     }
 ]
+
+
+// points
+
+const correctPoints = 10;
+
+startGame = () => {
+    questionNumber = 0;
+    score = 0;
+    avabQuestions = [...questions]
+    newQuestion();
+};
+
+newQuestion = () => {
+    questionNumber++;
+    questionIndex = Math.floor(Math.random() * avabQuestions.length);
+    currentQuestion = avabQuestions[questionIndex]
+    question.innerText = currentQuestion.question;
+}
+
+startGame()
