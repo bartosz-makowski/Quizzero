@@ -44,6 +44,11 @@ newQuestion = () => {
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
     question.innerText = currentQuestion.question;
+
+    choices.forEach( choice => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    })
 }
 
 startGame()
