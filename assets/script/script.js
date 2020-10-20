@@ -56,7 +56,12 @@ startButton.addEventListener('click', e => {
 beginButton.addEventListener('click', e => {
     inputPage.classList.add('hide');
     questionPage.classList.remove('hide');
-})
+});
+
+restartButton.addEventListener('click', e => {
+    finalScorePage.classList.add('hide');
+    questionPage.classList.remove('hide');
+});
 
 
 
