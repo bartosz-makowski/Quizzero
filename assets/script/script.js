@@ -1,8 +1,16 @@
+// dom sections consts
+const welcomePage = document.getElementById('welcome')
+const inputPage = document.getElementById('input');
+const questionPage = document.getElementsById('question')
+const finalScorePage = document.getElementsById('score');
+
+
+
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('answer-text'));
 
 let currentQuestion = {};
-let awaitingQuestion = true;
+let awaitingAnswer = false;
 let score = 0;
 let questionNumber = 0;
 let avabQuestions = [];
@@ -40,6 +48,11 @@ startGame = () => {
 };
 
 newQuestion = () => {
+    if (avabQuestions.length === 0 || selectedAnswer !== question.answer) {
+        //game end
+        finalScorePage.classList.remove('hide');
+        questionPage.classList.add('hide');
+    }
     questionNumber++;
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
@@ -48,7 +61,21 @@ newQuestion = () => {
     choices.forEach( choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
-    })
+    });
+    avabQuestions.splice(questionIndex, 1);
+
+    awaitingAnswer = true;
 }
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(!awaitingAnswers) return;
+
+        awaitingAnswer = false;
+        const selecteChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+        newQuestion();
+    });
+});
 
 startGame()
