@@ -53,8 +53,10 @@ startButton.addEventListener('click', e => {
     inputPage.classList.remove('hide')
 });
 
-
-
+beginButton.addEventListener('click', e => {
+    inputPage.classList.add('hide');
+    questionPage.classList.remove('hide');
+})
 
 
 
