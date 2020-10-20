@@ -68,10 +68,17 @@ function newQuestion() {
 function showQuestion(question) {
     questionText.innerText = question.question
     question.answers.forEach(answer => {
+        let myDiv = document.createElement('div')
+        myDiv.classList.add('col-xs-12')
+        myDiv.classList.add('col-md-6')
+        myDiv.classList.add('text-center')
+        myDiv.classList.add('align-self-center')
+        myDiv.classList.add('grid')
+        answerButtons.appendChild(myDiv)
         let button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('button')
-        answerButtons.appendChild(button)
+        myDiv.appendChild(button)
     });
 }
 
