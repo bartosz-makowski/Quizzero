@@ -61,6 +61,7 @@ function restart() {
 
 function newQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
+    
 }
 
 
@@ -79,6 +80,7 @@ function showQuestion(question) {
         button.innerText = answer.text
         button.classList.add('button')
         myDiv.appendChild(button)
+
     });
 }
 
