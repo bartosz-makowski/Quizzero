@@ -1,8 +1,8 @@
 // dom sections consts
 const welcomePage = document.getElementById('welcome')
 const inputPage = document.getElementById('input');
-const questionPage = document.getElementsById('question')
-const finalScorePage = document.getElementsById('score');
+const questionPage = document.getElementById('question')
+const finalScorePage = document.getElementById('score');
 
 
 
@@ -48,11 +48,11 @@ startGame = () => {
 };
 
 newQuestion = () => {
-    if (avabQuestions.length === 0 || selectedAnswer !== question.answer) {
+    /*if (avabQuestions.length === 0 || selectedAnswer !== question.answer) {
         //game end
         finalScorePage.classList.remove('hide');
         questionPage.classList.add('hide');
-    }
+    }*/
     questionNumber++;
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
