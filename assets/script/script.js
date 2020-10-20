@@ -35,10 +35,28 @@ let questions = [
     }
 ]
 
-
 // points
 
+
 const correctPoints = 10;
+
+
+// buttons behaviour functions
+
+
+const startButton = document.getElementById('button-start');
+const beginButton = document.getElementById('button-continue');
+const restartButton = document.getElementById('button-restart');
+
+startButton.addEventListener('click', e => {
+    welcomePage.classList.add('hide');
+    inputPage.classList.remove('hide')
+});
+
+
+
+
+
 
 startGame = () => {
     questionNumber = 0;
