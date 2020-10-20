@@ -23,13 +23,47 @@ const finalScore = document.getElementById('score')
 
 let questionNumber = document.getElementById('question-number')
 let questionText = document.getElementById('question-text')
-//const answers = Array.from(document.getElementsByClassName('answer-text'))
+let currentQuestion = {};
+let answerDelay = true;
+let questionNumber = 0;
+let avabQuestions = [];
+const correctPoints = 10;
 
 let shuffledQuestions, currentQuestionIndex
 
 
 
 // Functions
+
+startGame = () => {
+    questionNumber = 0;
+    score = 0;
+    avaialableQuestions = [...questions];
+    
+}
+
+fetch("https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=multiple")
+    .then(res => {
+        return res.json();
+    }).then(loadedQuestions => {
+        console.log(loadedQuestions.results);
+       // questions = loadedQuestions;
+       questions = loadedQuestions.results.map(loadedQuestion => {
+           const formattedQuestion = {
+               question: loadedQuestion.question
+           };
+           const answerChoices = [...loadedQuestion.incorrect_answers]
+           formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+           answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestions.correcr_answer);
+
+           answerChoices.forEach((choice, index) => {
+               formattedQuestion["choice" + (index+1)] = choice;
+           });
+       })
+    });
+    //.catch(err => {
+    //    console.error('err');
+    //});
 
 
 startButton.addEventListener('click', start)
@@ -45,9 +79,9 @@ continueButton.addEventListener('click', begin)
 function begin() {
     input.classList.add('hide')
     question.classList.remove('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    newQuestion()
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    startGame();
 }
 
 
@@ -57,17 +91,23 @@ function restart() {
     finalScore.classList.add('hide')
     input.classList.remove('hide')
     question.classList.add('hide')
+    startGame = () => {
+    questionNumber = 0;
+    score = 0;
+    avaialableQuestions = [...questions];
+    newQuestion();
+}
+
 }
 
 function newQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
-    
 }
 
 
 
 function showQuestion(question) {
-    questionText.innerText = question.question
+    questionText.innerText = loadedQuestion.question
     question.answers.forEach(answer => {
         let myDiv = document.createElement('div')
         myDiv.classList.add('col-xs-12')
@@ -80,16 +120,19 @@ function showQuestion(question) {
         button.innerText = answer.text
         button.classList.add('button')
         myDiv.appendChild(button)
-
     });
 }
 
 
 
+
+
+
+
 //temporary questions to test functionality before adding API
 
-let questions = [
-    {
+let questions = [];
+  /* {
       question: 'What is 2 + 2',
       answers: [
           { text: '4', correct: true, },
@@ -108,3 +151,4 @@ let questions = [
         ]
     }
 ];
+*/
