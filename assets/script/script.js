@@ -94,12 +94,26 @@ newQuestion = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(!awaitingAnswers) return;
+       // if(!awaitingAnswers) return;
 
         awaitingAnswer = false;
-        const selecteChoice = e.target;
+        
+
+        const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        newQuestion();
+        console.log(selectedAnswer == currentQuestion.answer);
+
+        if (selectedAnswer == currentQuestion.answer) {
+            selectedChoice.classList.add('button-correct')
+        } else {
+            selectedChoice.classList.add('button-wrong')
+        };
+        setTimeout( () => {
+            selectedChoice.classList.remove('button-correct');
+            selectedChoice.classList.remove('button-wrong');
+            newQuestion();
+        }, 1000);
+        
     });
 });
 
