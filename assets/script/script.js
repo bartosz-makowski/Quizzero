@@ -5,7 +5,7 @@ const questionPage = document.getElementById('question')
 const finalScorePage = document.getElementById('score');
 
 
-
+let questionOrder = document.getElementById('question-number');
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('answer-text'));
 
@@ -109,6 +109,10 @@ choices.forEach(choice => {
         };
         setTimeout( () => {
             selectedChoice.classList.remove('button-correct');
+            if (selectedAnswer != currentQuestion.answer) {
+                finalScorePage.classList.remove('hide');
+                questionPage.classList.add('hide');
+            };
             selectedChoice.classList.remove('button-wrong');
             newQuestion();
         }, 1000);
