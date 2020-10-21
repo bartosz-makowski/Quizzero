@@ -61,6 +61,7 @@ beginButton.addEventListener('click', e => {
 restartButton.addEventListener('click', e => {
     finalScorePage.classList.add('hide');
     questionPage.classList.remove('hide');
+    startGame();
 });
 
 
@@ -73,12 +74,9 @@ startGame = () => {
 };
 
 newQuestion = () => {
-    /*if (avabQuestions.length === 0 || selectedAnswer !== question.answer) {
-        //game end
-        finalScorePage.classList.remove('hide');
-        questionPage.classList.add('hide');
-    }*/
     questionNumber++;
+    questionOrder.innerText = questionNumber;
+    
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
     question.innerText = currentQuestion.question;
@@ -110,8 +108,7 @@ choices.forEach(choice => {
         setTimeout( () => {
             selectedChoice.classList.remove('button-correct');
             if (selectedAnswer != currentQuestion.answer) {
-                finalScorePage.classList.remove('hide');
-                questionPage.classList.add('hide');
+                endGame();
             };
             selectedChoice.classList.remove('button-wrong');
             newQuestion();
@@ -120,4 +117,8 @@ choices.forEach(choice => {
     });
 });
 
+function endGame() {
+    finalScorePage.classList.remove('hide');
+    questionPage.classList.add('hide');
+}
 startGame()
