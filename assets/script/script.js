@@ -101,12 +101,11 @@ choices.forEach(choice => {
 
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedAnswer == currentQuestion.answer);
 
         if (selectedAnswer == currentQuestion.answer) {
-            selectedChoice.classList.add('button-correct')
+            selectedChoice.classList.add('button-correct');
         } else {
-            selectedChoice.classList.add('button-wrong')
+            selectedChoice.classList.add('button-wrong');
         };
         setTimeout( () => {
             selectedChoice.classList.remove('button-correct');
