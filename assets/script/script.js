@@ -92,11 +92,7 @@ newQuestion = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-       // if(!awaitingAnswers) return;
-
-        awaitingAnswer = false;
         
-
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
@@ -117,8 +113,8 @@ choices.forEach(choice => {
     });
 });
 
-function endGame() {
+endGame = () => {
     finalScorePage.classList.remove('hide');
     questionPage.classList.add('hide');
-}
+};
 startGame()
