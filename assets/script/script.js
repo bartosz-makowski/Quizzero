@@ -16,12 +16,14 @@ let avabQuestions = [];
 
 let questions = [];
 
+//Fetch API request
+
+
 fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
     .then(res => {
         return res.json();
     })
     .then(loadedQuestions => {
-        console.log(loadedQuestions);
         questions = loadedQuestions.results.map(loadedQuestion => {
             const workingQuestion = {
                 question: loadedQuestion.question
@@ -48,10 +50,10 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
 
 // points
 
-let userScore = document.getElementById('user-points');
+var userScore = document.getElementById('user-points');
 const correctPoints = 10;
-let totalScore = document.getElementById('total-scrore')
-let bestScore = document.getElementById('best-score')
+let totalScore = document.getElementById('total-score');
+let bestScore = document.getElementById('best-score');
 
 // buttons behaviour functions
 
@@ -92,7 +94,8 @@ newQuestion = () => {
     
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
-    question.innerText = currentQuestion.question;
+    question.innerText = currentQuestion["question"];
+    console.log(currentQuestion);
 
     choices.forEach( choice => {
         const number = choice.dataset['number'];
@@ -117,6 +120,7 @@ choices.forEach(choice => {
         setTimeout( () => {
             selectedChoice.classList.remove('button-correct');
             if (selectedAnswer != currentQuestion.answer) {
+                totalScore.innerText = score;
                 endGame();
             };
             selectedChoice.classList.remove('button-wrong');
