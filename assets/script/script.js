@@ -4,7 +4,6 @@ const inputPage = document.getElementById('input');
 const questionPage = document.getElementById('question')
 const finalScorePage = document.getElementById('score');
 
-
 let questionOrder = document.getElementById('question-number');
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('answer-text'));
@@ -51,7 +50,8 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
 
 let userScore = document.getElementById('user-points');
 const correctPoints = 10;
-
+let totalScore = document.getElementById('total-scrore')
+let bestScore = document.getElementById('best-score')
 
 // buttons behaviour functions
 
