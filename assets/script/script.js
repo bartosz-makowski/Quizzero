@@ -17,14 +17,31 @@ let avabQuestions = [];
 
 let questions = [];
 
-fetch("https://opentdb.com/api.php?amount=50")
+fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
     .then(res => {
         return res.json();
     })
     .then(loadedQuestions => {
         console.log(loadedQuestions);
-       // questions = loadedQuestions;
-        //startGame();
+        questions = loadedQuestions.results.map(loadedQuestion => {
+            const workingQuestion = {
+                question: loadedQuestion.question
+            };
+
+            const answerChoices = [...loadedQuestion.incorrect_answers];
+            workingQuestion.answer = Math.floor(Math.random() *3) + 1;
+            answerChoices.splice(workingQuestion.answer - 1, 0,
+                loadedQuestion.correct_answer
+            );
+            
+            answerChoices.forEach((choice, index) => {
+                workingQuestion["choice" + (index + 1)] = choice;
+            });
+
+            return workingQuestion;
+        });
+
+        startGame();
     })
     .catch(err => {
         console.error(err);
