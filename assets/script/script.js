@@ -15,25 +15,20 @@ let score = 0;
 let questionNumber = 0;
 let avabQuestions = [];
 
-let questions = [
-    {
-        question: "who is your father ?",
-        choice1: "voldemort",
-        choice2: "Darth Vader",
-        choice3: "twoj stary",
-        choice4: "twoja stara",
-        answer: 2,
-    },
+let questions = [];
 
-    {
-        question: "why me ?",
-        choice1: "because",
-        choice2: "Yes",
-        choice3: "gdzie ty",
-        choice4: "co to sie stanelo ?",
-        answer: 4,
-    }
-]
+fetch("https://opentdb.com/api.php?amount=50")
+    .then(res => {
+        return res.json();
+    })
+    .then(loadedQuestions => {
+        console.log(loadedQuestions);
+       // questions = loadedQuestions;
+        //startGame();
+    })
+    .catch(err => {
+        console.error(err);
+    });
 
 // points
 
