@@ -61,6 +61,7 @@ beginButton.addEventListener('click', e => {
 restartButton.addEventListener('click', e => {
     finalScorePage.classList.add('hide');
     questionPage.classList.remove('hide');
+    userScore.innerText = 0;
     startGame();
 });
 
