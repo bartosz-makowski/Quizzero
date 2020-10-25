@@ -42,13 +42,6 @@ h3 {
     margin-top: 70px;
 }
 
-#question-row {
-    height: 25vh;
-}
-
-#answer-buttons {
-    max-height: 50vh;
-}
 
 #question-text {
     font-size: 5rem;
