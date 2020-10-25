@@ -37,7 +37,7 @@ let questions = [
 
 // points
 
-
+let userScore = document.getElementById('user-points');
 const correctPoints = 10;
 
 
@@ -107,6 +107,7 @@ choices.forEach(choice => {
                 endGame();
             };
             selectedChoice.classList.remove('button-wrong');
+            userScore.innerText = score += 10;
             newQuestion();
         }, 1000);
         
