@@ -62,6 +62,7 @@ let bestScore = document.getElementById('best-score');
 const startButton = document.getElementById('button-start');
 const beginButton = document.getElementById('button-continue');
 const restartButton = document.getElementById('button-restart');
+const username = document.getElementById('username');
 
 startButton.addEventListener('click', e => {
     welcomePage.classList.add('hide');
@@ -80,6 +81,9 @@ restartButton.addEventListener('click', e => {
     startGame();
 });
 
+username.addEventListener('keyup', () => {
+    beginButton.disabled = !username.value;
+});
 
 
 startGame = () => {
