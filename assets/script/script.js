@@ -1,8 +1,10 @@
 // dom sections consts
-const welcomePage = document.getElementById('welcome')
+const welcomePage = document.getElementById('welcome');
 const inputPage = document.getElementById('input');
 const questionPage = document.getElementById('question')
 const finalScorePage = document.getElementById('score');
+
+let loader = document.getElementById('loader');
 
 let questionOrder = document.getElementById('question-number');
 const question = document.getElementById('question-text');
@@ -41,7 +43,6 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
 
             return workingQuestion;
         });
-
         startGame();
     })
     .catch(err => {
@@ -69,7 +70,7 @@ startButton.addEventListener('click', e => {
 
 beginButton.addEventListener('click', e => {
     inputPage.classList.add('hide');
-    questionPage.classList.remove('hide');
+    //questionPage.classList.remove('hide');
 });
 
 restartButton.addEventListener('click', e => {
@@ -86,6 +87,8 @@ startGame = () => {
     score = 0;
     avabQuestions = [...questions]
     newQuestion();
+    loader.classList.add('hide')
+    questionPage.classList.remove('hide')
 };
 
 newQuestion = () => {
@@ -135,4 +138,3 @@ endGame = () => {
     finalScorePage.classList.remove('hide');
     questionPage.classList.add('hide');
 };
-startGame()
