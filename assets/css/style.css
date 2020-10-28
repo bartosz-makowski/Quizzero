@@ -99,8 +99,8 @@ h3 {
     border: 1.6rem solid #fafafa;
     border-radius: 50%;
     border-top: 1.6rem solid #FF7F11;
-    width: 12rem;
-    height: 12rem;
+    width: 16rem;
+    height: 16rem;
     animation: spin 2s linear infinite;
 }
 
