@@ -73,7 +73,6 @@ startButton.addEventListener('click', e => {
 
 beginButton.addEventListener('click', e => {
     inputPage.classList.add('hide');
-    //questionPage.classList.remove('hide');
 });
 
 restartButton.addEventListener('click', e => {
@@ -104,7 +103,6 @@ newQuestion = () => {
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
     question.innerText = currentQuestion["question"];
-    console.log(currentQuestion);
 
     choices.forEach( choice => {
         const number = choice.dataset['number'];
