@@ -96,9 +96,19 @@ h3 {
 /* Loader */
 
 #loader {
-    border: 1.6rem solid #fff;
+    border: 1.6rem solid #fafafa;
     border-radius: 50%;
     border-top: 1.6rem solid #FF7F11;
     width: 12rem;
     height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
