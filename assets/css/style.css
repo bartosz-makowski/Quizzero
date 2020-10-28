@@ -93,3 +93,12 @@ h3 {
     display: none;
 }
 
+/* Loader */
+
+#loader {
+    border: 1.6rem solid #fff;
+    border-radius: 50%;
+    border-top: 1.6rem solid #FF7F11;
+    width: 12rem;
+    height: 12rem;
+}
