@@ -53,7 +53,7 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
 
 const correctPoints = 10;
 
-let bestUserScore = document.getElementById('bestUserScore');
+let usernameScore = document.getElementById('bestUserScore');
 let userScore = document.getElementById('user-points');
 let totalScore = document.getElementById('total-score');
 let bestScore = document.getElementById('best-score');
@@ -128,8 +128,11 @@ choices.forEach(choice => {
             selectedChoice.classList.remove('button-correct');
             if (selectedAnswer != currentQuestion.answer) {
                 totalScore.innerText = score;
-                bestUserScore.innerText = username.value;
+                usernameScore.innerText = username.value;
+                localStorage.setItem('mostRecentScore', score);
                 endGame();
+                const mostRecentScore = localStorage.getItem('mostRecentScore');
+                bestScore.innerText = mostRecentScore;
             };
             selectedChoice.classList.remove('button-wrong');
             userScore.innerText = score += 10;
