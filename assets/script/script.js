@@ -73,6 +73,7 @@ startButton.addEventListener('click', e => {
 
 beginButton.addEventListener('click', e => {
     inputPage.classList.add('hide');
+    questionPage.classList.remove('hide');
 });
 
 restartButton.addEventListener('click', e => {
@@ -93,7 +94,6 @@ startGame = () => {
     avabQuestions = [...questions]
     newQuestion();
     loader.classList.add('hide')
-    questionPage.classList.remove('hide')
 };
 
 newQuestion = () => {
