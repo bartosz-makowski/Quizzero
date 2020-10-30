@@ -58,6 +58,13 @@ let userScore = document.getElementById('user-points');
 let totalScore = document.getElementById('total-score');
 let bestScore = document.getElementById('best-score');
 
+// Using local storage
+
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+const highScore = JSON.parse(localStorage.getItem("bestScore")) || [];
+localStorage.setItem("bestScore", JSON.stringify([]));
+console.log(highScore);
+
 // buttons behaviour functions
 
 
@@ -131,11 +138,13 @@ choices.forEach(choice => {
                 usernameScore.innerText = username.value;
                 localStorage.setItem('mostRecentScore', score);
                 endGame();
+                saveBestScore();
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
                 bestScore.innerText = mostRecentScore;
             };
             selectedChoice.classList.remove('button-wrong');
-            userScore.innerText = score += 10;
+            score += 10;
+            userScore.innerText = score;
             newQuestion();
         }, 1000);
         
@@ -145,4 +154,12 @@ choices.forEach(choice => {
 endGame = () => {
     finalScorePage.classList.remove('hide');
     questionPage.classList.add('hide');
+};
+
+function saveBestScore() {
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    };
+console.log(score);
 };
