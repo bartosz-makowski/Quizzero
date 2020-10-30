@@ -138,9 +138,10 @@ choices.forEach(choice => {
                 usernameScore.innerText = username.value;
                 localStorage.setItem('mostRecentScore', score);
                 endGame();
-                saveBestScore();
+                console.log(score);
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
                 bestScore.innerText = mostRecentScore;
+                saveBestScore();
             };
             selectedChoice.classList.remove('button-wrong');
             score += 10;
@@ -161,5 +162,6 @@ function saveBestScore() {
         score: mostRecentScore,
         name: username.value
     };
-console.log(score);
+    highScore.push(score);
+    console.log(mostRecentScore);
 };
