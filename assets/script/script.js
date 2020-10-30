@@ -53,6 +53,7 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
 
 const correctPoints = 10;
 
+const maxHighScores = 5;
 let usernameScore = document.getElementById('bestUserScore');
 let userScore = document.getElementById('user-points');
 let totalScore = document.getElementById('total-score');
@@ -60,10 +61,9 @@ let bestScore = document.getElementById('best-score');
 
 // Using local storage
 
-const mostRecentScore = localStorage.getItem('mostRecentScore');
+let mostRecentScore = score;
 const highScore = JSON.parse(localStorage.getItem("bestScore")) || [];
 localStorage.setItem("bestScore", JSON.stringify([]));
-console.log(highScore);
 
 // buttons behaviour functions
 
@@ -140,8 +140,10 @@ choices.forEach(choice => {
                 endGame();
                 console.log(score);
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
+                console.log(mostRecentScore);
                 bestScore.innerText = mostRecentScore;
                 saveBestScore();
+                console.log(mostRecentScore);
             };
             selectedChoice.classList.remove('button-wrong');
             score += 10;
@@ -163,5 +165,14 @@ function saveBestScore() {
         name: username.value
     };
     highScore.push(score);
+
+    highScore.sort( (a,b) => {
+        return b.score - a.score
+    });
+    highScore.splice(5);
+
+    localStorage.setItem('highScore', JSON.stringify(highScore));
+    console.log(highScore);
     console.log(mostRecentScore);
+    console.log(score);
 };
