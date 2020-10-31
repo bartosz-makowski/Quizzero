@@ -3,20 +3,33 @@ const welcomePage = document.getElementById('welcome');
 const inputPage = document.getElementById('input');
 const questionPage = document.getElementById('question')
 const finalScorePage = document.getElementById('score');
+const loader = document.getElementById('loader');
+const correctPoints = 10;
 
-let loader = document.getElementById('loader');
-
-let questionOrder = document.getElementById('question-number');
+const questionOrder = document.getElementById('question-number');
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('answer-text'));
 
+const maxHighScores = 5;
+const usernameScore = document.getElementById('bestUserScore');
+const userScore = document.getElementById('user-points');
+const totalScore = document.getElementById('total-score');
+const bestScore = document.getElementById('best-score');
+
+const startButton = document.getElementById('button-start');
+const beginButton = document.getElementById('button-continue');
+const restartButton = document.getElementById('button-restart');
+const username = document.getElementById('username');
+
 let currentQuestion = {};
 let awaitingAnswer = false;
-let score = 0;
 let questionNumber = 0;
 let avabQuestions = [];
-
 let questions = [];
+let score = 0;
+
+
+
 
 //Fetch API request
 
@@ -49,29 +62,20 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
         console.error(err);
     });
 
-// points
 
-const correctPoints = 10;
 
-const maxHighScores = 5;
-let usernameScore = document.getElementById('bestUserScore');
-let userScore = document.getElementById('user-points');
-let totalScore = document.getElementById('total-score');
-let bestScore = document.getElementById('best-score');
+
 
 // Using local storage
+
 
 let mostRecentScore = score;
 const highScore = JSON.parse(localStorage.getItem("bestScore")) || [];
 localStorage.setItem("bestScore", JSON.stringify([]));
 
+
 // buttons behaviour functions
 
-
-const startButton = document.getElementById('button-start');
-const beginButton = document.getElementById('button-continue');
-const restartButton = document.getElementById('button-restart');
-const username = document.getElementById('username');
 
 startButton.addEventListener('click', e => {
     welcomePage.classList.add('hide');
