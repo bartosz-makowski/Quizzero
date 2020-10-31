@@ -24,7 +24,7 @@ const username = document.getElementById('username');
 let currentQuestion = {};
 let awaitingAnswer = false;
 let questionNumber = 0;
-let avabQuestions = [];
+let availableQ = [];
 let questions = [];
 let score = 0;
 
@@ -74,7 +74,7 @@ localStorage.setItem('bestScore', JSON.stringify([]));
 
 
 const storeGame = (username, highscore) => {
-    localStorage.setItem('username', username);
+    localStorage.setItem('username', username.value);
     localStorage.setItem('highscore', highscore);
 };
 
@@ -111,7 +111,7 @@ username.addEventListener('keyup', () => {
 const startGame = () => {
     score = 0;
     questionNumber = 0
-    avabQuestions = [...questions]
+    availableQ = [...questions]
     newQuestion();
     loader.classList.add('hide')
 };
@@ -120,15 +120,15 @@ const newQuestion = () => {
     questionNumber++;
     questionOrder.innerText = questionNumber;
     
-    questionIndex = Math.floor(Math.random() * avabQuestions.length);
-    currentQuestion = avabQuestions[questionIndex]
+    questionIndex = Math.floor(Math.random() * availableQ.length);
+    currentQuestion = availableQ[questionIndex]
     question.innerHTML = currentQuestion["question"];
 
     choices.forEach( choice => {
         const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
+        choice.innerHTML = currentQuestion['choice' + number];
     });
-    avabQuestions.splice(questionIndex, 1);
+    availableQ.splice(questionIndex, 1);
 
     awaitingAnswer = true;
 }
@@ -153,6 +153,7 @@ choices.forEach(choice => {
                 endGame();
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
                 bestScore.innerText = mostRecentScore;
+                getHighScore();
                 saveBestScore();
             };
             selectedChoice.classList.remove('button-wrong');
