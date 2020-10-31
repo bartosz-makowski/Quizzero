@@ -1,4 +1,6 @@
 // dom sections consts
+
+
 const welcomePageRef = document.getElementById('welcome');
 const gameDetailPageRef = document.getElementById('game-detail');
 const questionPageRef = document.getElementById('question')
@@ -21,12 +23,15 @@ const beginButton = document.getElementById('button-continue');
 const restartButton = document.getElementById('button-restart');
 const username = document.getElementById('username');
 
+
+let score = 0;
+
 let currentQuestion = {};
 let awaitingAnswer = false;
 let questionNumber = 0;
 let availableQ = [];
 let questions = [];
-let score = 0;
+
 
 
 
@@ -43,7 +48,6 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
             const workingQuestion = {
                 question: loadedQuestion.question
             };
-
             const answerChoices = [...loadedQuestion.incorrect_answers];
             workingQuestion.answer = Math.floor(Math.random() *3) + 1;
             answerChoices.splice(workingQuestion.answer - 1, 0,
@@ -60,7 +64,6 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
     .catch(err => {
         console.error(err);
     });
-
 
 
 
@@ -106,6 +109,20 @@ restartButton.addEventListener('click', e => {
 username.addEventListener('keyup', () => {
     beginButton.disabled = !username.value;
 });
+
+
+const answerChoices = () => {
+    const answerChoices = [...loadedQuestion.incorrect_answers];
+            workingQuestion.answer = Math.floor(Math.random() *3) + 1;
+            answerChoices.splice(workingQuestion.answer - 1, 0,
+                loadedQuestion.correct_answer
+            );
+            
+            answerChoices.forEach((choice, index) => {
+                workingQuestion["choice" + (index + 1)] = choice;
+            });
+            return workingQuestion;
+};
 
 
 const startGame = () => {
