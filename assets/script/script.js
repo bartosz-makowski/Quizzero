@@ -1,8 +1,8 @@
 // dom sections consts
-const welcomePage = document.getElementById('welcome');
-const inputPage = document.getElementById('input');
-const questionPage = document.getElementById('question')
-const finalScorePage = document.getElementById('score');
+const welcomePageRef = document.getElementById('welcome');
+const gameDetailPageRef = document.getElementById('game-detail');
+const questionPageRef = document.getElementById('question')
+const finalScorePageRef = document.getElementById('score');
 const loader = document.getElementById('loader');
 const correctPoints = 10;
 
@@ -26,6 +26,7 @@ let awaitingAnswer = false;
 let questionNumber = 0;
 let avabQuestions = [];
 let questions = [];
+let score = 0;
 
 
 
@@ -37,8 +38,8 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
     .then(res => {
         return res.json();
     })
-    .then(loadedQuestions => {
-        questions = loadedQuestions.results.map(loadedQuestion => {
+    .then((loadedQuestions) => {
+        questions = loadedQuestions.results.map((loadedQuestion) => {
             const workingQuestion = {
                 question: loadedQuestion.question
             };
@@ -52,7 +53,6 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
             answerChoices.forEach((choice, index) => {
                 workingQuestion["choice" + (index + 1)] = choice;
             });
-
             return workingQuestion;
         });
         startGame();
@@ -69,26 +69,36 @@ fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
 
 
 let mostRecentScore = score;
-const highScore = JSON.parse(localStorage.getItem("bestScore")) || [];
-localStorage.setItem("bestScore", JSON.stringify([]));
+const highScore = JSON.parse(localStorage.getItem('bestScore')) || [];
+localStorage.setItem('bestScore', JSON.stringify([]));
+
+
+const storeGame = (username, highscore) => {
+    localStorage.setItem('username', username);
+    localStorage.setItem('highscore', highscore);
+};
+
+const getHighScore = () => {
+    return localStorage.getItem('highscore');
+}; 
 
 
 // buttons behaviour functions
 
 
 startButton.addEventListener('click', e => {
-    welcomePage.classList.add('hide');
-    inputPage.classList.remove('hide')
+    welcomePageRef.classList.add('hide');
+    gameDetailPageRef.classList.remove('hide')
 });
 
 beginButton.addEventListener('click', e => {
-    inputPage.classList.add('hide');
-    questionPage.classList.remove('hide');
+    gameDetailPageRef.classList.add('hide');
+    questionPageRef.classList.remove('hide');
 });
 
 restartButton.addEventListener('click', e => {
-    finalScorePage.classList.add('hide');
-    questionPage.classList.remove('hide');
+    finalScorePageRef.classList.add('hide');
+    questionPageRef.classList.remove('hide');
     userScore.innerText = 0;
     startGame();
 });
@@ -99,8 +109,8 @@ username.addEventListener('keyup', () => {
 
 
 const startGame = () => {
-    let questionNumber = 0;
-    let score = 0;
+    score = 0;
+    questionNumber = 0
     avabQuestions = [...questions]
     newQuestion();
     loader.classList.add('hide')
@@ -141,25 +151,22 @@ choices.forEach(choice => {
                 usernameScore.innerText = username.value;
                 localStorage.setItem('mostRecentScore', score);
                 endGame();
-                console.log(score);
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
-                console.log(mostRecentScore);
                 bestScore.innerText = mostRecentScore;
                 saveBestScore();
-                console.log(mostRecentScore);
             };
             selectedChoice.classList.remove('button-wrong');
             score += 10;
             userScore.innerText = score;
             newQuestion();
-        }, 1000);
+        }, 1200);
         
     });
 });
 
 const endGame = () => {
-    finalScorePage.classList.remove('hide');
-    questionPage.classList.add('hide');
+    finalScorePageRef.classList.remove('hide');
+    questionPageRef.classList.add('hide');
 };
 
 const saveBestScore = () => {
@@ -175,7 +182,4 @@ const saveBestScore = () => {
     highScore.splice(5);
 
     localStorage.setItem('highScore', JSON.stringify(highScore));
-    console.log(highScore);
-    console.log(mostRecentScore);
-    console.log(score);
 };
