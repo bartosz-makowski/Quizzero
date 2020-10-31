@@ -26,7 +26,6 @@ let awaitingAnswer = false;
 let questionNumber = 0;
 let avabQuestions = [];
 let questions = [];
-let score = 0;
 
 
 
@@ -99,21 +98,21 @@ username.addEventListener('keyup', () => {
 });
 
 
-startGame = () => {
-    questionNumber = 0;
-    score = 0;
+const startGame = () => {
+    let questionNumber = 0;
+    let score = 0;
     avabQuestions = [...questions]
     newQuestion();
     loader.classList.add('hide')
 };
 
-newQuestion = () => {
+const newQuestion = () => {
     questionNumber++;
     questionOrder.innerText = questionNumber;
     
     questionIndex = Math.floor(Math.random() * avabQuestions.length);
     currentQuestion = avabQuestions[questionIndex]
-    question.innerText = currentQuestion["question"];
+    question.innerHTML = currentQuestion["question"];
 
     choices.forEach( choice => {
         const number = choice.dataset['number'];
@@ -158,12 +157,12 @@ choices.forEach(choice => {
     });
 });
 
-endGame = () => {
+const endGame = () => {
     finalScorePage.classList.remove('hide');
     questionPage.classList.add('hide');
 };
 
-function saveBestScore() {
+const saveBestScore = () => {
     const score = {
         score: mostRecentScore,
         name: username.value
