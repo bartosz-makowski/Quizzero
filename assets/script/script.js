@@ -32,7 +32,14 @@ let questionNumber = 0;
 let availableQ = [];
 let questions = [];
 
+/** welcome page
+ * showing header
+ */
 
+startButton.addEventListener('click', e => {
+    welcomePageRef.classList.add('hide');
+    gameDetailPageRef.classList.remove('hide')
+});
 
 
 
@@ -76,23 +83,20 @@ const highScore = JSON.parse(localStorage.getItem('bestScore')) || [];
 localStorage.setItem('bestScore', JSON.stringify([]));
 
 
-const storeGame = (username, highscore) => {
+/**const storeGame = (username, highscore) => {
     localStorage.setItem('username', username.value);
     localStorage.setItem('highscore', highscore);
-};
+};*/
 
-const getHighScore = () => {
+/**const getHighScore = () => {
     return localStorage.getItem('highscore');
-}; 
+}; */
 
 
 // buttons behaviour functions
 
 
-startButton.addEventListener('click', e => {
-    welcomePageRef.classList.add('hide');
-    gameDetailPageRef.classList.remove('hide')
-});
+
 
 beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
@@ -170,7 +174,6 @@ choices.forEach(choice => {
                 endGame();
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
                 bestScore.innerText = mostRecentScore;
-                getHighScore();
                 saveBestScore();
             };
             selectedChoice.classList.remove('button-wrong');
@@ -185,7 +188,10 @@ choices.forEach(choice => {
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
     questionPageRef.classList.add('hide');
+    console.log(highScore);
+    console.log(username);
 };
+
 
 const saveBestScore = () => {
     const score = {
