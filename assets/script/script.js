@@ -1,27 +1,27 @@
 // dom sections consts
 
 
-const welcomePageRef = document.getElementById('welcome');
-const gameDetailPageRef = document.getElementById('game-detail');
-const questionPageRef = document.getElementById('question')
-const finalScorePageRef = document.getElementById('score');
-const loader = document.getElementById('loader');
+const welcomePageRef = document.querySelector("#welcome");
+const gameDetailPageRef = document.querySelector("#game-detail");
+const questionPageRef = document.querySelector("#question")
+const finalScorePageRef = document.querySelector("#score");
+const loader = document.querySelector("#loader");
 const correctPoints = 10;
 
-const questionOrder = document.getElementById('question-number');
-const question = document.getElementById('question-text');
-const choices = Array.from(document.getElementsByClassName('answer-text'));
+const questionOrder = document.querySelector("#question-number");
+const question = document.querySelector("#question-text");
+const choices = Array.from(document.querySelectorAll(".answer-text"));
 
 const maxHighScores = 5;
-const usernameScore = document.getElementById('bestUserScore');
-const userScore = document.getElementById('user-points');
-const totalScore = document.getElementById('total-score');
-const bestScore = document.getElementById('best-score');
+const usernameScore = document.querySelector("#bestUserScore");
+const userScore = document.querySelector("#user-points");
+const totalScore = document.querySelector("#total-score");
+const bestScore = document.querySelector("#best-score");
 
-const startButton = document.getElementById('button-start');
-const beginButton = document.getElementById('button-continue');
-const restartButton = document.getElementById('button-restart');
-const username = document.getElementById('username');
+const startButton = document.querySelector("#button-start");
+const beginButton = document.querySelector("#button-continue");
+const restartButton = document.querySelector("#button-restart");
+const username = document.querySelector("#username");
 
 
 let score = 0;
