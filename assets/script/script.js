@@ -12,7 +12,7 @@ const question = document.querySelector("#question-text");
 const choices = Array.from(document.querySelectorAll(".answer-text"));
 
 const maxHighScores = 5;
-const usernameScore = document.querySelector("#bestUserScore");
+const usernameScore = document.querySelector("#UsernameScore");
 const userScore = document.querySelector("#user-points");
 const totalScore = document.querySelector("#total-score");
 const bestScore = document.querySelector("#best-score");
@@ -28,8 +28,6 @@ let questionNumber = 0;
 
 let currentQuestion = {};
 
-let awaitingAnswer = false;
-
 
 let availableQ = [];
 let questions = [];
@@ -39,15 +37,18 @@ let questions = [];
  * showing header
  */
 
+
 startButton.addEventListener('click', e => {
     welcomePageRef.classList.add('hide');
     gameDetailPageRef.classList.remove('hide')
 });
 
+
 /**
  * Game details page
  * collecting username and questions amount
  */
+
 
 beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
@@ -59,7 +60,9 @@ username.addEventListener('keyup', () => {
     beginButton.disabled = !username.value;
 });
 
+
 //Fetch API request
+
 
 const getAPI = () => {
     fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
@@ -89,9 +92,12 @@ const getAPI = () => {
         });
 };
 
+
 // startGame
 
+
 const startGame = () => {
+    localStorage.setItem('username', username.value)
     score = 0;
     questionNumber = 0
     availableQ = [...questions]
@@ -117,37 +123,11 @@ localStorage.setItem('bestScore', JSON.stringify([]));
 }; */
 
 
-// buttons behaviour functions
-
-
-
-
-
-restartButton.addEventListener('click', e => {
-    finalScorePageRef.classList.add('hide');
-    questionPageRef.classList.remove('hide');
-    userScore.innerText = 0;
-    getAPI();
-});
-
-
-
-
-const answerChoices = () => {
-    const answerChoices = [...loadedQuestion.incorrect_answers];
-            workingQuestion.answer = Math.floor(Math.random() *3) + 1;
-            answerChoices.splice(workingQuestion.answer - 1, 0,
-                loadedQuestion.correct_answer
-            );
-            
-            answerChoices.forEach((choice, index) => {
-                workingQuestion["choice" + (index + 1)] = choice;
-            });
-            return workingQuestion;
-};
-
-
-
+/**
+ * Game starts
+ * show new question and answers
+ * 
+ */
 
 const newQuestion = () => {
     questionNumber++;
@@ -158,19 +138,22 @@ const newQuestion = () => {
     question.innerHTML = currentQuestion['question'];
 
     choices.forEach( choice => {
-        const number = choice.dataset['number'];
+        const number = choice.dataset.number;
         choice.innerHTML = currentQuestion['choice' + number];
     });
     availableQ.splice(questionIndex, 1);
 
-    awaitingAnswer = true;
 }
+
+/**
+ * logic of what happens when asnwer is clicked
+ */
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
+        const selectedAnswer = selectedChoice.dataset.number;
 
         if (selectedAnswer == currentQuestion.answer) {
             selectedChoice.classList.add('button-correct');
@@ -178,20 +161,26 @@ choices.forEach(choice => {
             selectedChoice.classList.add('button-wrong');
         };
         setTimeout( () => {
+            selectedChoice.classList.remove('button-wrong');
             selectedChoice.classList.remove('button-correct');
             if (selectedAnswer != currentQuestion.answer) {
                 totalScore.innerText = score;
-                usernameScore.innerText = username.value;
-                localStorage.setItem('mostRecentScore', score);
-                endGame();
+                const bestUser = localStorage.getItem('username')
+                usernameScore.innerText = bestUser;
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
                 bestScore.innerText = mostRecentScore;
-                saveBestScore();
-            };
-            selectedChoice.classList.remove('button-wrong');
-            score += 10;
-            userScore.innerText = score;
-            newQuestion();
+                endGame();
+            } else {
+                score += 10;
+                userScore.innerText = score;
+                let mostRecentScore = localStorage.getItem('mostRecentScore')
+                if (mostRecentScore < score) {
+                    localStorage.setItem('mostRecentScore', score)
+                    localStorage.setItem('username', username.value)
+                }
+                newQuestion();
+            }
+            
         }, 1200);
         
     });
@@ -200,17 +189,25 @@ choices.forEach(choice => {
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
     questionPageRef.classList.add('hide');
-    console.log(highScore);
-    console.log(username);
+    
 };
 
 
-const saveBestScore = () => {
+restartButton.addEventListener('click', e => {
+    getAPI();
+    finalScorePageRef.classList.add('hide');
+    questionPageRef.classList.remove('hide');
+    userScore.innerText = 0;
+    
+});
+
+/**
+ * const saveBestScore = () => {
     const score = {
         score: mostRecentScore,
         name: username.value
     };
-    highScore.push(score);
+    highScore.push(mostRecentScore);
 
     highScore.sort( (a,b) => {
         return b.score - a.score
@@ -218,4 +215,11 @@ const saveBestScore = () => {
     highScore.splice(5);
 
     localStorage.setItem('highScore', JSON.stringify(highScore));
+    console.log(score);
+    console.log(mostRecentScore);
+    console.log(username.value)
 };
+ * 
+ */
+ 
+
