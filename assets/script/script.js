@@ -25,14 +25,18 @@ const username = document.querySelector("#username");
 
 
 let score = 0;
+let questionNumber = 0;
 
 let currentQuestion = {};
+
 let awaitingAnswer = false;
-let questionNumber = 0;
+
+
 let availableQ = [];
 let questions = [];
 
-/** welcome page
+/** 
+ * welcome page
  * showing header
  */
 
@@ -41,38 +45,60 @@ startButton.addEventListener('click', e => {
     gameDetailPageRef.classList.remove('hide')
 });
 
+/**
+ * Game details page
+ * collecting username and questions amount
+ */
 
+beginButton.addEventListener('click', e => {
+    gameDetailPageRef.classList.add('hide');
+    questionPageRef.classList.remove('hide');
+    getAPI();
+});
+
+username.addEventListener('keyup', () => {
+    beginButton.disabled = !username.value;
+});
 
 //Fetch API request
 
-
-fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
-    .then(res => {
-        return res.json();
-    })
-    .then((loadedQuestions) => {
-        questions = loadedQuestions.results.map((loadedQuestion) => {
-            const workingQuestion = {
-                question: loadedQuestion.question
-            };
-            const answerChoices = [...loadedQuestion.incorrect_answers];
-            workingQuestion.answer = Math.floor(Math.random() *3) + 1;
-            answerChoices.splice(workingQuestion.answer - 1, 0,
-                loadedQuestion.correct_answer
-            );
-            
-            answerChoices.forEach((choice, index) => {
-                workingQuestion["choice" + (index + 1)] = choice;
+const getAPI = () => {
+    fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
+        .then(res => {
+            return res.json();
+        })
+        .then((loadedQuestions) => {
+            questions = loadedQuestions.results.map((loadedQuestion) => {
+                const workingQuestion = {
+                    question: loadedQuestion.question
+                };
+                const answerChoices = [...loadedQuestion.incorrect_answers];
+                workingQuestion.answer = Math.floor(Math.random() *3) + 1;
+                answerChoices.splice(workingQuestion.answer - 1, 0,
+                    loadedQuestion.correct_answer
+                );
+                
+                answerChoices.forEach((choice, index) => {
+                    workingQuestion["choice" + (index + 1)] = choice;
+                });
+                return workingQuestion;
             });
-            return workingQuestion;
+            startGame();
+        })
+        .catch(err => {
+            console.error(err);
         });
-        startGame();
-    })
-    .catch(err => {
-        console.error(err);
-    });
+};
 
+// startGame
 
+const startGame = () => {
+    score = 0;
+    questionNumber = 0
+    availableQ = [...questions]
+    newQuestion();
+    loader.classList.add('hide')
+};
 
 
 // Using local storage
@@ -98,21 +124,15 @@ localStorage.setItem('bestScore', JSON.stringify([]));
 
 
 
-beginButton.addEventListener('click', e => {
-    gameDetailPageRef.classList.add('hide');
-    questionPageRef.classList.remove('hide');
-});
 
 restartButton.addEventListener('click', e => {
     finalScorePageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
     userScore.innerText = 0;
-    startGame();
+    getAPI();
 });
 
-username.addEventListener('keyup', () => {
-    beginButton.disabled = !username.value;
-});
+
 
 
 const answerChoices = () => {
@@ -129,13 +149,7 @@ const answerChoices = () => {
 };
 
 
-const startGame = () => {
-    score = 0;
-    questionNumber = 0
-    availableQ = [...questions]
-    newQuestion();
-    loader.classList.add('hide')
-};
+
 
 const newQuestion = () => {
     questionNumber++;
@@ -143,7 +157,7 @@ const newQuestion = () => {
     
     questionIndex = Math.floor(Math.random() * availableQ.length);
     currentQuestion = availableQ[questionIndex]
-    question.innerHTML = currentQuestion["question"];
+    question.innerHTML = currentQuestion['question'];
 
     choices.forEach( choice => {
         const number = choice.dataset['number'];
