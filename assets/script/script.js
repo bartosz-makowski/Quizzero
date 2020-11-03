@@ -5,7 +5,6 @@ const welcomePageRef = document.querySelector("#welcome");
 const gameDetailPageRef = document.querySelector("#game-detail");
 const questionPageRef = document.querySelector("#question")
 const finalScorePageRef = document.querySelector("#score");
-const loader = document.querySelector("#loader");
 const correctPoints = 10;
 
 const questionOrder = document.querySelector("#question-number");
@@ -97,7 +96,6 @@ const startGame = () => {
     questionNumber = 0
     availableQ = [...questions]
     newQuestion();
-    loader.classList.add('hide')
 };
 
 
