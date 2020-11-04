@@ -25,6 +25,7 @@ const username = document.querySelector("#username");
 
 let score = 0;
 let questionNumber = 0;
+let mostRecentScore = score;
 
 let currentQuestion = {};
 
@@ -97,30 +98,12 @@ const getAPI = () => {
 
 
 const startGame = () => {
-    localStorage.setItem('username', username.value)
+    localStorage.setItem('username', username.value);
     score = 0;
     questionNumber = 0
     availableQ = [...questions]
     newQuestion();
 };
-
-
-// Using local storage
-
-
-let mostRecentScore = score;
-const highScore = JSON.parse(localStorage.getItem('bestScore')) || [];
-localStorage.setItem('bestScore', JSON.stringify([]));
-
-
-/**const storeGame = (username, highscore) => {
-    localStorage.setItem('username', username.value);
-    localStorage.setItem('highscore', highscore);
-};*/
-
-/**const getHighScore = () => {
-    return localStorage.getItem('highscore');
-}; */
 
 
 /**
@@ -133,8 +116,9 @@ const newQuestion = () => {
     questionNumber++;
     questionOrder.innerText = questionNumber;
     
+    
     questionIndex = Math.floor(Math.random() * availableQ.length);
-    currentQuestion = availableQ[questionIndex]
+    currentQuestion = availableQ[questionIndex];
     question.innerHTML = currentQuestion['question'];
 
     choices.forEach( choice => {
@@ -146,7 +130,7 @@ const newQuestion = () => {
 }
 
 /**
- * logic of what happens when asnwer is clicked
+ * logic of what happens when answer is clicked
  */
 
 choices.forEach(choice => {
@@ -173,7 +157,8 @@ choices.forEach(choice => {
             } else {
                 score += 10;
                 userScore.innerText = score;
-                let mostRecentScore = localStorage.getItem('mostRecentScore')
+                //localStorage.setItem('mostRecentScore', score);
+                console.log(score)
                 if (mostRecentScore < score) {
                     localStorage.setItem('mostRecentScore', score)
                     localStorage.setItem('username', username.value)
@@ -201,25 +186,4 @@ restartButton.addEventListener('click', e => {
     
 });
 
-/**
- * const saveBestScore = () => {
-    const score = {
-        score: mostRecentScore,
-        name: username.value
-    };
-    highScore.push(mostRecentScore);
-
-    highScore.sort( (a,b) => {
-        return b.score - a.score
-    });
-    highScore.splice(5);
-
-    localStorage.setItem('highScore', JSON.stringify(highScore));
-    console.log(score);
-    console.log(mostRecentScore);
-    console.log(username.value)
-};
- * 
- */
- 
 
