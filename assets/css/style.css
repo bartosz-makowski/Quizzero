@@ -93,3 +93,33 @@ h3 {
     display: none;
 }
 
+/* @Media queries*/
+
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    #question {
+        margin-top: 20px;
+    }
+
+    #question-text {
+        font-size: 4rem;
+        padding: 10px;
+    }
+
+    .grid {
+        padding: 7px;
+    }
+
+    .button {
+        font-size: 2rem;
+    }
+
+}
