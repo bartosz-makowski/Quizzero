@@ -20,6 +20,7 @@ const bestScore = document.querySelector("#best-score");
 const startButton = document.querySelector("#button-start");
 const beginButton = document.querySelector("#button-continue");
 const restartButton = document.querySelector("#button-restart");
+const goBackButton = document.querySelector('#button-goback');
 const username = document.querySelector("#username");
 
 
