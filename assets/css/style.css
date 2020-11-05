@@ -129,7 +129,7 @@ h3 {
 @media only screen and (min-width: 767px) {
 
     #question {
-        padding-top: 135px;
+        padding-top: 120px;
     }
 
     .grid {
@@ -138,5 +138,12 @@ h3 {
 
     .button {
         font-size: 3rem;
+    }
+}
+
+
+@media only screen and (min-width: 990px) {
+    #question {
+        padding-top: 0;
     }
 }
