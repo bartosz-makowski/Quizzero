@@ -187,4 +187,7 @@ restartButton.addEventListener('click', e => {
     
 });
 
-
+goBackButton.addEventListener('click', e => {
+    finalScorePageRef.classList.add('hide');
+    gameDetailPageRef.classList.remove('hide');
+});
