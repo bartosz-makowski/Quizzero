@@ -160,7 +160,7 @@ choices.forEach(choice => {
             } else {
                 score += 10;
                 userScore.innerText = score;
-                //localStorage.setItem('mostRecentScore', score);
+                enableAnswerButtons();
                 console.log(score)
                 if (mostRecentScore < score) {
                     localStorage.setItem('mostRecentScore', score)
@@ -180,7 +180,9 @@ const disableAnswerButtons = () => {
 };
 
 const enableAnswerButtons = () => {
-    
+    choices.forEach(choice => {
+        choice.disabled = false;
+   });
 }
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
