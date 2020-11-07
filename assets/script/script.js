@@ -136,14 +136,16 @@ const newQuestion = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        
+        disableAnswerButtons();
+        console.log(choice);
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
-
         if (selectedAnswer == currentQuestion.answer) {
             selectedChoice.classList.add('button-correct');
+            
         } else {
             selectedChoice.classList.add('button-wrong');
+            
         };
         setTimeout( () => {
             selectedChoice.classList.remove('button-wrong');
@@ -167,11 +169,19 @@ choices.forEach(choice => {
                 newQuestion();
             }
             
-        }, 1200);
+        }, 5000);
         
     });
 });
+const disableAnswerButtons = () => {
+   choices.forEach(choice => {
+        choice.disabled = true;
+   });
+};
 
+const enableAnswerButtons = () => {
+    
+}
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
     questionPageRef.classList.add('hide');
