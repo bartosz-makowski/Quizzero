@@ -174,17 +174,22 @@ choices.forEach(choice => {
         
     });
 });
+
+
 const disableAnswerButtons = () => {
    choices.forEach(choice => {
         choice.disabled = true;
    });
 };
 
+
 const enableAnswerButtons = () => {
     choices.forEach(choice => {
         choice.disabled = false;
    });
-}
+};
+
+
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
     questionPageRef.classList.add('hide');
