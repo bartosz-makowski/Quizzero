@@ -156,6 +156,7 @@ choices.forEach(choice => {
                 usernameScore.innerText = bestUser;
                 const mostRecentScore = localStorage.getItem('mostRecentScore');
                 bestScore.innerText = mostRecentScore;
+                enableAnswerButtons();
                 endGame();
             } else {
                 score += 10;
@@ -169,7 +170,7 @@ choices.forEach(choice => {
                 newQuestion();
             }
             
-        }, 5000);
+        }, 1200);
         
     });
 });
