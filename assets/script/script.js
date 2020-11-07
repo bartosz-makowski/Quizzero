@@ -67,7 +67,7 @@ username.addEventListener('keyup', () => {
 
 
 const getAPI = () => {
-    fetch("https://opentdb.com/api.php?amount=50&difficulty=easy")
+    fetch("https://opentdb.com/api.php?amount=2&category=9&difficulty=easy&type=multiple")
         .then(res => {
             return res.json();
         })
@@ -114,20 +114,24 @@ const startGame = () => {
  */
 
 const newQuestion = () => {
-    questionNumber++;
-    questionOrder.innerText = questionNumber;
-    
-    
-    questionIndex = Math.floor(Math.random() * availableQ.length);
-    currentQuestion = availableQ[questionIndex];
-    question.innerHTML = currentQuestion['question'];
+    if (availableQ.length === 0) { 
+        endGame();
+    } else {
 
-    choices.forEach( choice => {
-        const number = choice.dataset.number;
-        choice.innerHTML = currentQuestion['choice' + number];
-    });
-    availableQ.splice(questionIndex, 1);
+        questionNumber++;
+        questionOrder.innerText = questionNumber;
+        
+        
+        const questionIndex = Math.floor(Math.random() * availableQ.length);
+        currentQuestion = availableQ[questionIndex];
+        question.innerHTML = currentQuestion['question'];
 
+        choices.forEach( choice => {
+            const number = choice.dataset.number;
+            choice.innerHTML = currentQuestion['choice' + number];
+        });
+        availableQ.splice(questionIndex, 1);
+    }    
 }
 
 /**
