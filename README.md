@@ -27,12 +27,12 @@ The goal of this project is to provide the users with a fun and interactive quiz
 
 ### User Goals :jigsaw: 
 * Ability to input your name
-* Ability to choose from different question categories
 * Ability to see the best score
 * Ability to see the final score
+* ability to choose amount of question
 * Visual feedback when correct answer is chosen
 * Visual feedback when incorrect answer is chosen
-* Visual and sound interaction and feedback
+* Visual interaction and feedback
 * Interact with the website on both Desktop tablet and mobile
 
 ## User stories 	:dart:
