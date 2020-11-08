@@ -22,8 +22,9 @@ const beginButton = document.querySelector("#button-continue");
 const restartButton = document.querySelector("#button-restart");
 const goBackButton = document.querySelector('#button-goback');
 const username = document.querySelector("#username");
+const dropdownNumber = document.querySelector('#questionAmount');
 
-
+let selectedAmount = dropdownNumber.options[dropdownNumber.selectedIndex].value;
 let score = 0;
 let questionNumber = 0;
 let mostRecentScore = 0;
@@ -33,6 +34,9 @@ let currentQuestion = {};
 
 let availableQ = [];
 let questions = [];
+
+
+
 
 /** 
  * welcome page
@@ -55,6 +59,10 @@ startButton.addEventListener('click', e => {
 beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
+    console.log(selectedAmount)
+    
+    console.log(dropdownNumber)
+    
     getAPI();
 });
 
@@ -67,7 +75,7 @@ username.addEventListener('keyup', () => {
 
 
 const getAPI = () => {
-    fetch("https://opentdb.com/api.php?amount=2&category=9&difficulty=easy&type=multiple")
+    fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple")
         .then(res => {
             return res.json();
         })
@@ -165,6 +173,7 @@ choices.forEach(choice => {
                 bestScore.innerText = mostRecentScore;
                 enableAnswerButtons();
                 endGame();
+                console.log(dropdownNumber);
             } else {
                 
                 // correct answer selected
@@ -177,6 +186,7 @@ choices.forEach(choice => {
                 if (mostRecentScore < score) {
                     localStorage.setItem('mostRecentScore', score)
                     localStorage.setItem('username', username.value)
+                    console.log(dropdown.value);
                 }
                 newQuestion();
             }
