@@ -26,7 +26,7 @@ const username = document.querySelector("#username");
 
 let score = 0;
 let questionNumber = 0;
-let mostRecentScore = score;
+let mostRecentScore = 0;
 
 let currentQuestion = {};
 
@@ -95,7 +95,7 @@ const getAPI = () => {
 };
 
 
-// startGame
+// startGame setting username to local storage 0 for score and queationNumber
 
 
 const startGame = () => {
@@ -109,7 +109,7 @@ const startGame = () => {
 
 /**
  * Game starts
- * show new question and answers
+ * show new question
  * 
  */
 
@@ -155,6 +155,9 @@ choices.forEach(choice => {
             selectedChoice.classList.remove('button-wrong');
             selectedChoice.classList.remove('button-correct');
             if (selectedAnswer != currentQuestion.answer) {
+
+                //wrong answer selected
+
                 totalScore.innerText = score;
                 const bestUser = localStorage.getItem('username')
                 usernameScore.innerText = bestUser;
@@ -163,10 +166,14 @@ choices.forEach(choice => {
                 enableAnswerButtons();
                 endGame();
             } else {
+                
+                // correct answer selected
+
                 score += 10;
                 userScore.innerText = score;
                 enableAnswerButtons();
                 console.log(score)
+                localStorage.getItem('mostRecentScore')
                 if (mostRecentScore < score) {
                     localStorage.setItem('mostRecentScore', score)
                     localStorage.setItem('username', username.value)
@@ -179,6 +186,9 @@ choices.forEach(choice => {
     });
 });
 
+/**
+ * disabling and enabling answers
+ */
 
 const disableAnswerButtons = () => {
    choices.forEach(choice => {
@@ -193,13 +203,19 @@ const enableAnswerButtons = () => {
    });
 };
 
-
+/**
+ * hiding questions page and showing game summary
+ */
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
     questionPageRef.classList.add('hide');
     
 };
 
+
+/**
+ * showing question page and getting new set of questions
+ */
 
 restartButton.addEventListener('click', e => {
     getAPI();
@@ -209,6 +225,10 @@ restartButton.addEventListener('click', e => {
     
 });
 
+
+/**
+ * showing game detail page to allow choice of new ammount of questions and changing name"
+ */
 goBackButton.addEventListener('click', e => {
     finalScorePageRef.classList.add('hide');
     gameDetailPageRef.classList.remove('hide');
