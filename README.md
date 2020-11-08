@@ -37,9 +37,8 @@ The goal of this project is to provide the users with a fun and interactive quiz
 
 ## User stories 	:dart:
 * As a user I expect to type my name before starting the game
-* As a user I want to be able to select a category of my questions
+* As a user I want to be able to select amount of my questions
 * As a user I want to be able to see when I choose the correct answer
-* As a user I expect to hear a sound when incorrect answer is pressed
 * As a user I expect to check my final score and my best score in the game session
 
 ## Site Owner Goals	:dart:
