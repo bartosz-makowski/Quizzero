@@ -64,7 +64,7 @@ The theme of this project is *game*, therefore my design choices are heavily inf
   
 **Fonts**
 
-I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here]()
+I chose to use the font **Open Sans** as it was designed with a neutral, yet friendly appearance which compliments the general attitude of this project's design and it's desired function. it can be found [here](https://fonts.google.com/specimen/Open+Sans?sidebar.open=true&selection.family=Open+Sans:ital@1)
 
 **Colours**
 
