@@ -11,7 +11,6 @@ const questionOrder = document.querySelector("#question-number");
 const question = document.querySelector("#question-text");
 const choices = Array.from(document.querySelectorAll(".answer-text"));
 
-const maxHighScores = 5;
 const usernameScore = document.querySelector("#UsernameScore");
 const userScore = document.querySelector("#user-points");
 const totalScore = document.querySelector("#total-score");
@@ -22,9 +21,9 @@ const beginButton = document.querySelector("#button-continue");
 const restartButton = document.querySelector("#button-restart");
 const goBackButton = document.querySelector('#button-goback');
 const username = document.querySelector("#username");
-const dropdownNumber = document.querySelector('#questionAmount');
+const dropdownNumber = document.querySelector('#questionAmount')
 
-let selectedAmount = dropdownNumber.options[dropdownNumber.selectedIndex].value;
+
 let score = 0;
 let questionNumber = 0;
 let mostRecentScore = 0;
@@ -36,7 +35,9 @@ let availableQ = [];
 let questions = [];
 
 
-
+const getQuestionAmount = () => {
+    fetchMyData()
+}
 
 /** 
  * welcome page
@@ -59,10 +60,6 @@ startButton.addEventListener('click', e => {
 beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
-    console.log(selectedAmount)
-    
-    console.log(dropdownNumber)
-    
     getAPI();
 });
 
@@ -75,7 +72,8 @@ username.addEventListener('keyup', () => {
 
 
 const getAPI = () => {
-    fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple")
+    let selectedAmount = dropdownNumber.options[dropdownNumber.selectedIndex].value;
+    fetch(`https://opentdb.com/api.php?amount=${selectedAmount}&category=9&difficulty=easy&type=multiple`)
         .then(res => {
             return res.json();
         })
@@ -149,7 +147,6 @@ const newQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         disableAnswerButtons();
-        console.log(choice);
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
         if (selectedAnswer == currentQuestion.answer) {
@@ -173,7 +170,6 @@ choices.forEach(choice => {
                 bestScore.innerText = mostRecentScore;
                 enableAnswerButtons();
                 endGame();
-                console.log(dropdownNumber);
             } else {
                 
                 // correct answer selected
@@ -181,16 +177,13 @@ choices.forEach(choice => {
                 score += 10;
                 userScore.innerText = score;
                 enableAnswerButtons();
-                console.log(score)
                 localStorage.getItem('mostRecentScore')
                 if (mostRecentScore < score) {
                     localStorage.setItem('mostRecentScore', score)
                     localStorage.setItem('username', username.value)
-                    console.log(dropdown.value);
                 }
                 newQuestion();
             }
-            
         }, 1200);
         
     });
