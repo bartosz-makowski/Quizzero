@@ -38,6 +38,7 @@ The goal of this project is to provide the users with a fun and interactive quiz
 ## User stories 	:dart:
 * As a user I expect to type my name before starting the game
 * As a user I want to be able to select amount of my questions
+* As a user I want to be able to change from light to dark mode
 * As a user I want to be able to see when I choose the correct answer
 * As a user I expect to check my final score and my best score in the game session
 
@@ -84,13 +85,13 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 ## Features :abacus:
 **Features that have been developed:**
 * Visible feedback when hover over buttons
-* Sound feedback when incorrect answer is pressed
 * Total score counter
 * Best score counter
 
 
 **Features to be implemented in the future**
-
+* Sound feedback when buttons are pressed
+* option to choose question category
 
 ## Technologies Used :computer:
 
