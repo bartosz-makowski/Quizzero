@@ -11,10 +11,10 @@ const questionOrder = document.querySelector("#question-number");
 const question = document.querySelector("#question-text");
 const choices = Array.from(document.querySelectorAll(".answer-text"));
 
-const usernameScore = document.querySelector("#UsernameScore");
-const userScore = document.querySelector("#user-points");
-const totalScore = document.querySelector("#total-score");
-const bestScore = document.querySelector("#best-score");
+const bestUsername = document.querySelector("#bestUsername");
+const userScoreRef = document.querySelector("#user-points");
+const totalScoreRef = document.querySelector("#total-points");
+const bestScoreRef = document.querySelector("#best-score");
 
 const startButton = document.querySelector("#button-start");
 const beginButton = document.querySelector("#button-continue");
@@ -26,7 +26,7 @@ const dropdownNumber = document.querySelector('#questionAmount')
 
 let score = 0;
 let questionNumber = 0;
-let mostRecentScore = 0;
+let bestScore = 0;
 
 let currentQuestion = {};
 
@@ -163,11 +163,7 @@ choices.forEach(choice => {
 
                 //wrong answer selected
 
-                totalScore.innerText = score;
-                const bestUser = localStorage.getItem('username')
-                usernameScore.innerText = bestUser;
-                const mostRecentScore = localStorage.getItem('mostRecentScore');
-                bestScore.innerText = mostRecentScore;
+                totalScoreRef.innerText = score;
                 enableAnswerButtons();
                 endGame();
             } else {
@@ -175,12 +171,12 @@ choices.forEach(choice => {
                 // correct answer selected
 
                 score += 10;
-                userScore.innerText = score;
+                userScoreRef.innerText = score;
                 enableAnswerButtons();
-                localStorage.getItem('mostRecentScore')
-                if (mostRecentScore < score) {
-                    localStorage.setItem('mostRecentScore', score)
-                    localStorage.setItem('username', username.value)
+                console.log(score);
+                if (bestScore < score) {
+                    localStorage.setItem('bestScore', score)
+                    localStorage.setItem('bestUsername', username.value)
                 }
                 newQuestion();
             }
