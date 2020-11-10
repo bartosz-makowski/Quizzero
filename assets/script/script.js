@@ -120,7 +120,8 @@ const startGame = () => {
  */
 
 const newQuestion = () => {
-    if (availableQ.length === 0) { 
+    if (availableQ.length === 0) {
+        totalScoreRef.innerText = score; 
         endGame();
     } else {
 
@@ -226,7 +227,7 @@ restartButton.addEventListener('click', e => {
     getAPI();
     finalScorePageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
-    score = 0;
+    userScoreRef.innerText = 0
     
 });
 
@@ -237,5 +238,5 @@ restartButton.addEventListener('click', e => {
 goBackButton.addEventListener('click', e => {
     finalScorePageRef.classList.add('hide');
     gameDetailPageRef.classList.remove('hide');
-    
+    userScoreRef.innerText = 0
 });
