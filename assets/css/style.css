@@ -31,11 +31,25 @@ h3 {
 
 /* themeToggleButton*/
 
-#themeToggleButton {
+#themeChanger {
     margin-top: 20px;
     margin-right: 20px;
-    font-size: 1.8rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    padding: 20px;
 }
+
+#toggleText {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 0;
+    right: 20px;
+}
+
+.togglepadding {
+    padding: 0;
+}
+
 
 
 
