@@ -11,7 +11,7 @@ const questionOrder = document.querySelector("#question-number");
 const question = document.querySelector("#question-text");
 const choices = Array.from(document.querySelectorAll(".answer-text"));
 
-const bestUsername = document.querySelector("#bestUsername");
+const bestUsernameRef = document.querySelector("#bestUsername");
 const userScoreRef = document.querySelector("#user-points");
 const totalScoreRef = document.querySelector("#total-points");
 const bestScoreRef = document.querySelector("#best-score");
@@ -26,8 +26,7 @@ const dropdownNumber = document.querySelector('#questionAmount')
 
 let score = 0;
 let questionNumber = 0;
-let bestScore = 0;
-
+let bestScore = localStorage.getItem('bestScore');
 let currentQuestion = {};
 
 
@@ -60,6 +59,7 @@ startButton.addEventListener('click', e => {
 beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
+    userScoreRef.innerText = 0;
     getAPI();
 });
 
@@ -164,6 +164,11 @@ choices.forEach(choice => {
                 //wrong answer selected
 
                 totalScoreRef.innerText = score;
+                let bestUsername = localStorage.getItem('bestUsername');
+                let bestScore = localStorage.getItem('bestScore');
+                bestUsernameRef.innerText = bestUsername;
+                bestScoreRef.innerText = bestScore;
+                console.log(bestScore);
                 enableAnswerButtons();
                 endGame();
             } else {
@@ -174,6 +179,7 @@ choices.forEach(choice => {
                 userScoreRef.innerText = score;
                 enableAnswerButtons();
                 console.log(score);
+                console.log(bestScore);
                 if (bestScore < score) {
                     localStorage.setItem('bestScore', score)
                     localStorage.setItem('bestUsername', username.value)
@@ -220,7 +226,7 @@ restartButton.addEventListener('click', e => {
     getAPI();
     finalScorePageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
-    userScore.innerText = 0;
+    score = 0;
     
 });
 
@@ -231,4 +237,5 @@ restartButton.addEventListener('click', e => {
 goBackButton.addEventListener('click', e => {
     finalScorePageRef.classList.add('hide');
     gameDetailPageRef.classList.remove('hide');
+    
 });
