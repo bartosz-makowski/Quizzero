@@ -10,7 +10,7 @@ const correctPoints = 10;
 const questionOrder = document.querySelector("#question-number");
 const question = document.querySelector("#question-text");
 const choices = Array.from(document.querySelectorAll(".answer-text"));
-
+const buttons = Array.from(document.querySelectorAll('.button'));
 const bestUsernameRef = document.querySelector("#bestUsername");
 const userScoreRef = document.querySelector("#user-points");
 const totalScoreRef = document.querySelector("#total-points");
@@ -51,14 +51,13 @@ const getQuestionAmount = () => {
 
 darkModeChanger.addEventListener('click', e => {
     darkModeBtnRef.classList.add('hide');
-    body.classList.add('body-dark');
-    startButton.classList.add('button-dark');
-    beginButton.classList.add('button-dark');
-    restartButton.classList.add('button-dark');
-    goBackButton.classList.add('button-dark');
-    lightModeChanger.classList.add('button-dark');
     lightModeBtnRef.classList.remove('hide');
+    body.classList.add('body-dark');
     
+    buttons.forEach(button => {
+        button.classList.add('button-dark');
+    });
+
     choices.forEach(choice => {
         choice.classList.add('button-dark')
     });
@@ -66,12 +65,12 @@ darkModeChanger.addEventListener('click', e => {
 
 lightModeChanger.addEventListener('click', e => {
     lightModeBtnRef.classList.add('hide');
-    body.classList.remove('body-dark');
-    startButton.classList.remove('button-dark');
-    beginButton.classList.remove('button-dark');
-    restartButton.classList.remove('button-dark');
-    goBackButton.classList.remove('button-dark');
     darkModeBtnRef.classList.remove('hide');
+    body.classList.remove('body-dark');
+
+    buttons.forEach(button => {
+        button.classList.remove('button-dark');
+    });
     
     choices.forEach(choice => {
         choice.classList.remove('button-dark')
