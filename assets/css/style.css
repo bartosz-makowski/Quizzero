@@ -13,7 +13,7 @@ body {
 
 .body-dark {
     background-color: #03120e;
-    color: #fafafa;
+    color: #fcf7ff;
 }
 
 h1 {
@@ -81,6 +81,10 @@ h3 {
     color: #000;
 }
 
+.button-dark {
+    background-color: #f49e4c;
+    border: 1px solid #e69245;
+}
 
 .button:hover {
     background-color: none;
