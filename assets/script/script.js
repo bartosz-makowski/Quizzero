@@ -1,5 +1,5 @@
 // dom sections consts
-
+const body = document.querySelector('#body');
 
 const welcomePageRef = document.querySelector("#welcome");
 const gameDetailPageRef = document.querySelector("#game-detail");
@@ -48,7 +48,14 @@ const getQuestionAmount = () => {
 /** 
  * welcome page
  * showing header
+ * theme changers
  */
+
+darkModeChanger.addEventListener('click', e => {
+    darkModeBtnRef.classList.add('hide');
+    body.classList.add('body-dark');
+    console.log("click")
+})
 
 
 startButton.addEventListener('click', e => {
