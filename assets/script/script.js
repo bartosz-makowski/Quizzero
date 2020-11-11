@@ -15,12 +15,19 @@ const bestUsernameRef = document.querySelector("#bestUsername");
 const userScoreRef = document.querySelector("#user-points");
 const totalScoreRef = document.querySelector("#total-points");
 const bestScoreRef = document.querySelector("#best-score");
+const username = document.querySelector("#username");
 
 const startButton = document.querySelector("#button-start");
 const beginButton = document.querySelector("#button-continue");
 const restartButton = document.querySelector("#button-restart");
 const goBackButton = document.querySelector('#button-goback');
-const username = document.querySelector("#username");
+
+const lightModeChanger = document.querySelector('#lightThemeChanger');
+const lightModeBtnRef = document.querySelector('#light_mode');
+const darkModeChanger = document.querySelector('#darkThemeChanger');
+const darkModeBtnRef = document.querySelector('#dark_mode')
+
+
 const dropdownNumber = document.querySelector('#questionAmount')
 
 
