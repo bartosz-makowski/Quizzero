@@ -86,7 +86,7 @@ h3 {
 }
 
 .button:hover {
-    background-color: none;
+    background-color: #FF7F11;
     box-shadow: 5px 10px 18px #252525;
 }
 
