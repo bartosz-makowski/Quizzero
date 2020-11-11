@@ -27,7 +27,6 @@ const lightModeBtnRef = document.querySelector('#light_mode');
 const darkModeChanger = document.querySelector('#darkThemeChanger');
 const darkModeBtnRef = document.querySelector('#dark_mode')
 
-
 const dropdownNumber = document.querySelector('#questionAmount')
 
 
@@ -54,7 +53,14 @@ const getQuestionAmount = () => {
 darkModeChanger.addEventListener('click', e => {
     darkModeBtnRef.classList.add('hide');
     body.classList.add('body-dark');
-    console.log("click")
+    startButton.classList.add('button-dark');
+    beginButton.classList.add('button-dark');
+    restartButton.classList.add('button-dark');
+    goBackButton.classList.add('button-dark');
+    lightModeChanger.classList.add('button-dark');
+    choices.forEach(choice => {
+        choice.classList.add('button-dark')
+    });
 })
 
 
