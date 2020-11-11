@@ -100,9 +100,19 @@ h3 {
     border-color: #2fbf71;
 }
 
+.button-correct-dark {
+    background-color: #c0da74;
+    border-color: #c0da74;
+}
+
 .button-wrong {
     background-color: #EF2D56;
     border-color: #EF2D56;
+}
+
+.button-wrong-dark {
+    background-color: #ab3428;
+    border-color: #ab3428;
 }
 
 
