@@ -29,7 +29,6 @@ const darkModeBtnRef = document.querySelector('#dark_mode')
 
 const dropdownNumber = document.querySelector('#questionAmount')
 
-
 let score = 0;
 let questionNumber = 0;
 let bestScore = localStorage.getItem('bestScore');
@@ -58,6 +57,8 @@ darkModeChanger.addEventListener('click', e => {
     restartButton.classList.add('button-dark');
     goBackButton.classList.add('button-dark');
     lightModeChanger.classList.add('button-dark');
+    lightModeBtnRef.classList.remove('hide');
+    
     choices.forEach(choice => {
         choice.classList.add('button-dark')
     });
