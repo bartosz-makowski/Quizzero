@@ -39,10 +39,6 @@ let availableQ = [];
 let questions = [];
 
 
-const getQuestionAmount = () => {
-    fetchMyData()
-}
-
 /** 
  * welcome page
  * showing header
