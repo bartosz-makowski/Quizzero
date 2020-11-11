@@ -62,6 +62,20 @@ darkModeChanger.addEventListener('click', e => {
     choices.forEach(choice => {
         choice.classList.add('button-dark')
     });
+});
+
+lightModeChanger.addEventListener('click', e => {
+    lightModeBtnRef.classList.add('hide');
+    body.classList.remove('body-dark');
+    startButton.classList.remove('button-dark');
+    beginButton.classList.remove('button-dark');
+    restartButton.classList.remove('button-dark');
+    goBackButton.classList.remove('button-dark');
+    darkModeBtnRef.classList.remove('hide');
+    
+    choices.forEach(choice => {
+        choice.classList.remove('button-dark')
+    });
 })
 
 
