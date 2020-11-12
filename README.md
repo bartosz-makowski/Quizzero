@@ -121,8 +121,8 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 #### Tests
 ##### Using W3C Markup Validator
 ###### Test 1
-* **Error:** Bad value Questions amount for attribute for on element label: An ID must not contain whitespace.
-* **Solution:** Changing ``<label for="Questions amount">``to ``<label for="Questions-amount">`` fixed this issue
+* **Error:** The value of the for attribute of the label element must be the ID of a non-hidden form control.
+* **Solution:** Removing ``<label for="Questions-amount">`` fixed this issue
 ###### Test 2
 * **Warning:**  Empty heading. From line 90, column 17; to line 90, column 39
 * **Solution:** Adding  ``<h1 id="question-text">Loading question...</h1>`` fixed this issue
