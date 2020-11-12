@@ -1,5 +1,5 @@
 # Quizzero
-Project of a quizz web application using API from [Open Trivia Database](https://opentdb.com/)
+Project of a Quiz web application using API from [Open Trivia Database](https://opentdb.com/)
 
 ## Contents:book:
 ### UX:superhero_man:	
