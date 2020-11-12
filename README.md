@@ -124,8 +124,8 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * **Error:** 
 * **Solution:** 
 ###### Test 2
-* **Warning:** 
-* **Solution** 
+* **Error:** background-color none is not a background-color value : none 
+* **Solution** changing ``background-color: none`` to ``background-color: #FF7F11`` fixed this issue
 
 ### Bugs :mosquito:
 
