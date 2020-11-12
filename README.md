@@ -79,6 +79,8 @@ Using learned knowledge from prior research, bright and vibrant colours have a h
 * #FF7F11 - Amber SAE ECE - used to highlight buttons
 * #EF2D56 - Red Crayola - used to highlight wrong answer
 * #2FBF71 - Emerald - used to highlight correct answer
+* #03120E - Dark jungle Green - used as a background in dark mode
+* #FCF7FF - Magnolia - used for texts in dark mode
 
 **Sounds**
 
@@ -122,13 +124,13 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 
 #### Tests
 ##### Using W3C Markup Validator
-###### Test 1
+###### Test 1 :writing_hand:
 * **Error:** The value of the for attribute of the label element must be the ID of a non-hidden form control.
 * **Solution:** Removing ``<label for="Questions-amount">`` fixed this issue
-###### Test 2
+###### Test 2 :mag_right:
 * **Warning:**  Empty heading. From line 90, column 17; to line 90, column 39
 * **Solution:** Adding  ``<h1 id="question-text">Loading question...</h1>`` fixed this issue
-###### Test 3
+###### Test 3 :chart_with_upwards_trend:
 * **Error:** background-color none is not a background-color value : none 
 * **Solution** Changing ``background-color: none`` to ``background-color: #FF7F11`` fixed this issue
 
@@ -136,6 +138,8 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 #### Answer feedback issue :spider:
 * **Issue:** During the development process after testing the app noticed that answer feedback wasn't displayed correctly after doing changes to pass the markup validaor
 * **Fix:** Removing ``background-color: #FF7F11`` attribute for ``button:hover`` fixed this issue
+
+
 ### Deployment :surfer:
 
 Quizzero was developed on GitPod, using git and GitHub to host the repository.
