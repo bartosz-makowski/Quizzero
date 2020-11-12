@@ -108,7 +108,6 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * [Font-Awesome](https://fontawesome.com/icons?d=gallery)
 * [Google Fonts](https://fonts.google.com/)
 * [Balsamiq](https://balsamiq.com/)
-* [Picresize](https://picresize.com/)
 * [Favicon generator](https://realfavicongenerator.net/)
 * [AmIresponsive](http://ami.responsivedesign.is/) - used to generate multi screen view of the webiste on different devices
 
