@@ -138,7 +138,9 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 #### Answer feedback issue :spider:
 * **Issue:** During the development process after testing the app noticed that answer feedback wasn't displayed correctly after doing changes to pass the markup validaor
 * **Fix:** Removing ``background-color: #FF7F11`` attribute for ``button:hover`` fixed this issue
-
+#### Previous question issue :ant:
+* **Issue:** During the development process after testing the app noticed thatafter restarting the game user could see last question and asnwers from previous game
+* **Fix:** creating loader() and placing it before getAPI() in ``goBackButton`` and ``beginButton`` fixed this problem
 
 ### Deployment :surfer:
 
