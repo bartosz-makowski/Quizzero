@@ -124,8 +124,11 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * **Error:** Bad value Questions amount for attribute for on element label: An ID must not contain whitespace.
 * **Solution:** Changing ``<label for="Questions amount">``to ``<label for="Questions-amount">`` fixed this issue
 ###### Test 2
+* **Warning:**  Empty heading. From line 90, column 17; to line 90, column 39
+* **Solution:** Adding  ``<h1 id="question-text">Loading question...</h1>`` fixed this issue
+###### Test 3
 * **Error:** background-color none is not a background-color value : none 
-* **Solution** changing ``background-color: none`` to ``background-color: #FF7F11`` fixed this issue
+* **Solution** Changing ``background-color: none`` to ``background-color: #FF7F11`` fixed this issue
 
 ### Bugs :mosquito:
 
