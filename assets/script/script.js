@@ -90,6 +90,7 @@ beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
     userScoreRef.innerText = 0;
+    loader();
     getAPI();
 });
 
@@ -254,6 +255,7 @@ const endGame = () => {
  */
 
 restartButton.addEventListener('click', e => {
+    loader();
     getAPI();
     finalScorePageRef.classList.add('hide');
     questionPageRef.classList.remove('hide');
@@ -270,3 +272,10 @@ goBackButton.addEventListener('click', e => {
     gameDetailPageRef.classList.remove('hide');
     userScoreRef.innerText = 0
 });
+
+const loader = () => {
+    question.innerText = "Loading question...";
+    choices.forEach( choice => {
+        choice.innerText = " ";
+    });
+};
