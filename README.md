@@ -131,7 +131,9 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * **Solution** Changing ``background-color: none`` to ``background-color: #FF7F11`` fixed this issue
 
 ### Bugs :mosquito:
-
+#### Answer feedback issue :spider:
+* **Issue:** During the development process after testing the app noticed that answer feedback wasn't displayed correctly after doing changes to pass the markup validaor
+* **Fix:** Removing ``background-color: #FF7F11`` attribute for ``button:hover`` fixed this issue
 ### Deployment :surfer:
 
 Quizzero was developed on GitPod, using git and GitHub to host the repository.
