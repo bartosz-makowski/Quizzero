@@ -1,4 +1,4 @@
-# Quizzero
+# Quizzero :see_no_evil: :hear_no_evil: :speak_no_evil:
 Project of a Quiz web application using API from [Open Trivia Database](https://opentdb.com/)
 
 ## Contents:book:
