@@ -72,9 +72,13 @@ I chose to use the font **Open Sans** as it was designed with a neutral, yet fri
 
 **Colours**
 
-Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes folder [here](https://github.com/bartosz-makowski/Quizzero/blob/master/assets/wireframes/colorpalette.png).
+Using learned knowledge from prior research, bright and vibrant colours have a higher influence in terms of positivity and therefore more potential interactions. [Link to the colour palette](https://coolors.co/fafafa-000000-ff7f11-ef2d56-2fbf71). Screenshot of the colour palette has been added to the wireframes [folder](https://github.com/bartosz-makowski/Quizzero/blob/master/wireframes/colorpalette.png).
+Dark theme palette can be found [here](https://github.com/bartosz-makowski/Quizzero/blob/master/wireframes/quizzero-dark-theme-palette.png)
+![Light theme palette](https://github.com/bartosz-makowski/Quizzero/blob/master/wireframes/colorpalette.png)
+![Dark theme palette](https://github.com/bartosz-makowski/Quizzero/blob/master/wireframes/quizzero-dark-theme-palette.png)
 
 **Colours used**
+
 * #FAFAFA - Cultured - used for the background
 * #000000 - Black - used for text to achieve a good contrast
 * #FF7F11 - Amber SAE ECE - used to highlight buttons
@@ -86,7 +90,7 @@ Using learned knowledge from prior research, bright and vibrant colours have a h
 **Sounds**
 
 ## Wireframes :straight_ruler:
-I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe [folder](https://github.com/bartosz-makowski/Quizzero/tree/master/assets/wireframes).
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe [folder](https://github.com/bartosz-makowski/Quizzero/tree/master/wireframes).
 
 ## Features :abacus:
 **Features that have been developed:**
