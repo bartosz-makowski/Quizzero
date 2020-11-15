@@ -17,6 +17,7 @@ const totalScoreRef = document.querySelector("#total-points");
 const bestScoreRef = document.querySelector("#best-score");
 const username = document.querySelector("#username");
 
+
 const startButton = document.querySelector("#button-start");
 const beginButton = document.querySelector("#button-continue");
 const restartButton = document.querySelector("#button-restart");
@@ -28,6 +29,7 @@ const darkModeChanger = document.querySelector('#darkThemeChanger');
 const darkModeBtnRef = document.querySelector('#dark_mode')
 
 const dropdownNumber = document.querySelector('#questionAmount')
+const dropdownLevel = document.querySelector('#questionLevel')
 
 let score = 0;
 let questionNumber = 0;
@@ -103,8 +105,9 @@ username.addEventListener('keyup', () => {
 
 
 const getAPI = () => {
+    let selectedLevel = dropdownLevel.options[dropdownLevel.selectedIndex].value;
     let selectedAmount = dropdownNumber.options[dropdownNumber.selectedIndex].value;
-    fetch(`https://opentdb.com/api.php?amount=${selectedAmount}&category=9&difficulty=easy&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=${selectedAmount}&category=9&difficulty=${selectedLevel}&type=multiple`)
         .then(res => {
             return res.json();
         })
