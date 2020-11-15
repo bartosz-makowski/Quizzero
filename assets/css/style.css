@@ -71,7 +71,7 @@ h3 {
 /* Buttons */
 
 
-.button {
+.gamebutton {
     background-color: #FF7F11;
     border-radius: 5px;
     border: 1px solid #FF8011C5;
@@ -85,11 +85,11 @@ h3 {
     border: 1px solid #e69245;
 }
 
-.button:hover {
+.gamebutton:hover {
     box-shadow: 5px 10px 18px #252525;
 }
 
-.button:focus {
+.gamebutton:focus {
     outline: none;
 }
 
