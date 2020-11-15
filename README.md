@@ -1,4 +1,5 @@
 # Quizzero :see_no_evil: :hear_no_evil: :speak_no_evil:
+![Multi Device View](https://github.com/bartosz-makowski/Quizzero/blob/master/wireframes/quizzero-multiscreens.png)
 Project of a Quiz web application using API from [Open Trivia Database](https://opentdb.com/)
 
 ## Contents:book:
@@ -7,7 +8,7 @@ Project of a Quiz web application using API from [Open Trivia Database](https://
   * **Target Audience Goals** 	:dart:
   * **Site Owner Goals**  	:dart:
   * **User Requirements and Expectations** 	:dart:
-  * **Design Choices** :framed_picture:		
+  * **Design Choices** :framed_picture:
     * Fonts
     * Icons
     * Colours
