@@ -205,7 +205,6 @@ choices.forEach(choice => {
                 let bestScore = localStorage.getItem('bestScore');
                 bestUsernameRef.innerText = bestUsername;
                 bestScoreRef.innerText = bestScore;
-                console.log(bestScore);
                 enableAnswerButtons();
                 endGame();
             } else {
@@ -215,8 +214,6 @@ choices.forEach(choice => {
                 score += 10;
                 userScoreRef.innerText = score;
                 enableAnswerButtons();
-                console.log(score);
-                console.log(bestScore);
                 if (bestScore < score) {
                     localStorage.setItem('bestScore', score)
                     localStorage.setItem('bestUsername', username.value)
