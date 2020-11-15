@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 h2 {
@@ -118,9 +118,14 @@ h3 {
 
 
 @media only screen and (min-width: 767px) {
+    h1 {
+       font-size: 7rem; 
+    }
+
     h3 {
         font-size: 4.5rem;
     }
+
     #question {
         padding-top: 12rem;
     }  
