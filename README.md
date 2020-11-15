@@ -129,10 +129,17 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * **Solution:** Removing ``<label for="Questions-amount">`` fixed this issue
 ###### Test 2 :mag_right:
 * **Warning:**  Empty heading. From line 90, column 17; to line 90, column 39
-* **Solution:** Adding  ``<h1 id="question-text">Loading question...</h1>`` fixed this issue
+* **Solution:** Adding  ``<h2 id="question-text">Loading question...</h2>`` fixed this issue
 ###### Test 3 :chart_with_upwards_trend:
 * **Error:** background-color none is not a background-color value : none 
 * **Solution** Changing ``background-color: none`` to ``background-color: #FF7F11`` fixed this issue
+##### Manual testing of the game
+###### Test1 :magnet:
+* **Error:** After testing the game and running out of questions screen would freeze at last question.
+* **Solution** Adding an if statement in ``newQuestion()`` at line 160 fixed this problem
+###### Test 2 :chart_with_downwards_trend:
+* **Error:** During testing we found that after selecting one answer user could still select another answer before next question was displayed
+* **Solution**  creating a disableAnswerButtons() and enableAnswerButtons() fixed this issue
 
 ### Bugs :mosquito:
 #### Answer feedback issue :spider:
