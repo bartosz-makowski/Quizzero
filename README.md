@@ -86,7 +86,7 @@ Using learned knowledge from prior research, bright and vibrant colours have a h
 **Sounds**
 
 ## Wireframes :straight_ruler:
-I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe folder [here](https://github.com/bartosz-makowski/Quizzero/tree/master/assets/wireframes).
+I built the wireframes for this project using <a href="https://balsamiq.com/">Balsamiq</a>. Started by doing a very basic wireframe for Mobile/Tablet/Desktop - these were to get a basic understanding of how structurally elements would appear on the page. You can view this wireframe in a wireframe [folder](https://github.com/bartosz-makowski/Quizzero/tree/master/assets/wireframes).
 
 ## Features :abacus:
 **Features that have been developed:**
@@ -111,7 +111,6 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * [jQuery](https://jquery.com/)
 * [Git](https://git-scm.com/)
 * [Bootstrap](https://getbootstrap.com/)
-* [Font-Awesome](https://fontawesome.com/icons?d=gallery)
 * [Google Fonts](https://fonts.google.com/)
 * [Balsamiq](https://balsamiq.com/)
 * [AmIresponsive](http://ami.responsivedesign.is/) - used to generate multi screen view of the webiste on different devices
