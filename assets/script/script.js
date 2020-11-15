@@ -5,7 +5,6 @@ const welcomePageRef = document.querySelector("#welcome");
 const gameDetailPageRef = document.querySelector("#game-detail");
 const questionPageRef = document.querySelector("#question")
 const finalScorePageRef = document.querySelector("#score");
-const correctPoints = 10;
 
 const questionOrder = document.querySelector("#question-number");
 const question = document.querySelector("#question-text");
@@ -40,7 +39,6 @@ let currentQuestion = {};
 
 let availableQ = [];
 let questions = [];
-
 
 
 

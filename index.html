@@ -11,14 +11,14 @@
 </head>
 <body id="body">
 
-<div class="container-fluid" id="dark-mode">
+<div class="container-fluid" id="dark-mode" aria-label="Dark mode button">
     <div class="row justify-content-center">
         <div class="col-2 text-center togglepadding">
             <button type="button" class="gamebutton" id="darkThemeChanger">Dark Mode</button>
         </div>
     </div>
 </div>
-<div class="container-fluid hide" id="light-mode" >
+<div class="container-fluid hide" id="light-mode" aria-label="Light mode button" >
     <div class="row justify-content-center">
         <div class="col-2 text-center togglepadding">
             <button type="button" class="gamebutton" id="lightThemeChanger">Light Mode</button>
@@ -29,10 +29,10 @@
     <section class="container-fluid container-height" id="welcome">
         <div class="row justify-content-center container-height">
             <div class="col-12 text-center align-self-center">
-                <h1>Welcome to the QUIZZERO</h1>
+                <h1 aria-label="Welcome to quizzero">Welcome to the QUIZZERO</h1>
             </div>
             <div class="col-12 text-center align-self-center">
-                <button type="button" class="gamebutton" id="button-start">Let's Start</button>
+                <button type="button" class="gamebutton" id="button-start" aria-label="Start button">Let's Start</button>
             </div>
         </div>
     </section>
@@ -42,16 +42,16 @@
     <section class="container-fluid container-height hide" id="game-detail">
         <div class="row justify-content-center container-height">
             <div class="col-12 text-center align-self-center grid">
-                <h2>Quizzero</h2>
+                <h2 aria-label="Quizzero">Quizzero</h2>
             </div>
             <div class="col-12 text-center align-self-center grid">
                 <h3>Type in your name to start the game</h3>
             </div>
             <div class="col-12 text-center align-self-center grid">
-                <input id="username" type="text" placeholder="Your name">
+                <input id="username" type="text" placeholder="Your name" aria-label="type in your name">
             </div>
             <div class="col-12 text-center align-self-center grid">
-                <h3>Select difficulty level</h3>
+                <h3 aria-label="select question difficulty">Select difficulty level</h3>
             </div>
             <div class="col-12 text-center align-self-center grid">
                 <select id="questionLevel">
@@ -61,7 +61,7 @@
                 </select>
             </div>
             <div class="col-12 text-center align-self-center grid">
-                <h3>Select number of questions</h3>
+                <h3 aria-label="select number of questions">Select number of questions</h3>
             </div>
             <div class="col-12 text-center align-self-center grid">
                 <select id="questionAmount">
@@ -78,7 +78,7 @@
                 </select>
             </div>
             <div class="col-12 text-center align-self-center grid">
-                <button type="button" class="gamebutton" id="button-continue" disabled>Start</button>
+                <button type="button" class="gamebutton" id="button-continue" aria-label="Begin the game button" disabled>Start</button>
             </div>
         </div>
     </section>
@@ -89,27 +89,27 @@
         <div class="row justify-content-around align-items-center" id="question-row">
             <div class="col-12 text-center align-self-end">
                 <h2 id="question-number">1</h2>
-                <h2 id="question-text">Loading question...</h2>
+                <h2 id="question-text" aria-label="question">Loading question...</h2>
             </div>
         </div>
         <div class="row justify-content-around" id="answer-buttons">
             <div class="col-xs-12 col-sm-6 text-center align-self-center grid">
-                <button class="gamebutton answer-text" data-number="1"></button>
+                <button class="gamebutton answer-text" data-number="1" aria-label="answer 1"></button>
             </div>
             <div class="col-xs-12 col-sm-6 text-center align-self-center grid">
-                <button class="gamebutton answer-text" data-number="2"></button>
+                <button class="gamebutton answer-text" data-number="2" aria-label="anwser 2"></button>
             </div>
             <div class="col-xs-12 col-sm-6 text-center align-self-center grid">
-                <button class="gamebutton answer-text" data-number="3"></button>
+                <button class="gamebutton answer-text" data-number="3" aria-label="answer 3"></button>
             </div>
             <div class="col-xs-12 col-sm-6 text-center align-self-center grid">
-                <button class="gamebutton answer-text" data-number="4"></button>
+                <button class="gamebutton answer-text" data-number="4" aria-label="answer 4"></button>
             </div>
         </div>
         <div class="row">
             <div class="col-12 text-center">
                 <h3>Score:</h3>
-                <h3 id="user-points">0</h3>
+                <h3 id="user-points" aria-label="user points">0</h3>
             </div>
         </div>
         
@@ -118,24 +118,24 @@
     <section class="container-fluid container-height hide" id="score">
         <div class="row justify-content-center container-height align-items-center">
             <div class="col-12 text-center align-self-center">
-                <h2>Final Score</h2>
+                <h2 aria-label="final score">Final Score</h2>
             </div>
-        <div class="col-xs-12 col-md-6 text-center align-self-center align-self-lg-start">
-            <h3>Total score:</h3>
-            <h3 id="total-points">0</h3>
+            <div class="col-xs-12 col-md-6 text-center align-self-center align-self-lg-start">
+                <h3>Total score:</h3>
+                <h3 id="total-points" aria-label="total points">0</h3>
+            </div>
+            <div class="col-xs-12 col-md-6 text-center align-self-center align-self-lg-start">
+                <h3>Best Score:</h3>
+                <h3 id="bestUsername" aria-label="best user">Unknown</h3>
+                <h3 id="best-score" aria-label="best score">0</h3>
+            </div>
+            <div class="col-6 text-center align-self-center align-self-lg-start">
+                <button type="button" class="gamebutton" id="button-restart" aria-label="restart the game button">Start again</button>
+            </div>
+            <div class="col-6 text-center align-self-center align-self-lg-start" aria-label="go back to start button">
+                <button type="button" class="gamebutton" id="button-goback">New game</button>
+            </div>
         </div>
-        <div class="col-xs-12 col-md-6 text-center align-self-center align-self-lg-start">
-            <h3>Best Score:</h3>
-            <h3 id="bestUsername">Unknown</h3>
-            <h3 id="best-score">0</h3>
-        </div>
-        <div class="col-6 text-center align-self-center align-self-lg-start">
-            <button type="button" class="gamebutton" id="button-restart">Start again</button>
-        </div>
-        <div class="col-6 text-center align-self-center align-self-lg-start">
-            <button type="button" class="gamebutton" id="button-goback">New game</button>
-        </div>
-    </div>
     </section>
 
 <script src="assets/script/script.js"></script>
