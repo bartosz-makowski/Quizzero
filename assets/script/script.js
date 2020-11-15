@@ -42,11 +42,10 @@ let availableQ = [];
 let questions = [];
 
 
-/** 
- * welcome page
- * showing header
- * theme changers
- */
+
+
+// theme changers
+ 
 
 darkModeChanger.addEventListener('click', e => {
     darkModeBtnRef.classList.add('hide');
@@ -74,8 +73,11 @@ lightModeChanger.addEventListener('click', e => {
     choices.forEach(choice => {
         choice.classList.remove('button-dark')
     });
-})
+});
 
+
+//welcome page
+//showing header
 
 startButton.addEventListener('click', e => {
     welcomePageRef.classList.add('hide');
@@ -83,11 +85,9 @@ startButton.addEventListener('click', e => {
 });
 
 
-/**
- * Game details page
- * collecting username and questions amount
- */
 
+// Game details page
+// collecting username and questions amount
 
 beginButton.addEventListener('click', e => {
     gameDetailPageRef.classList.add('hide');
@@ -138,8 +138,10 @@ const getAPI = () => {
 };
 
 
-// startGame setting username to local storage 0 for score and queationNumber
-
+/**
+ * setting username to local storage
+ * 0 for score and queationNumber
+*/
 
 const startGame = () => {
     localStorage.setItem('username', username.value);
@@ -152,8 +154,8 @@ const startGame = () => {
 
 /**
  * Game starts
- * show new question
- * 
+ * show new random question
+ * removing selected question from questions array
  */
 
 const newQuestion = () => {
@@ -176,9 +178,9 @@ const newQuestion = () => {
     }    
 }
 
-/**
- * logic of what happens when answer is clicked
- */
+
+ // logic of what happens when answer is clicked
+ 
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -220,8 +222,9 @@ choices.forEach(choice => {
     });
 });
 
+
 /**
- * disabling and enabling answers
+ * disabling clicking on answer buttons
  */
 
 const disableAnswerButtons = () => {
@@ -231,15 +234,21 @@ const disableAnswerButtons = () => {
 };
 
 
+/**
+ * enabling clicking on answer buttons
+ */
+
 const enableAnswerButtons = () => {
     choices.forEach(choice => {
         choice.disabled = false;
    });
 };
 
+
 /**
  * hiding questions page and showing game summary
  */
+
 const endGame = () => {
     finalScorePageRef.classList.remove('hide');
     questionPageRef.classList.add('hide');
@@ -247,9 +256,9 @@ const endGame = () => {
 };
 
 
-/**
- * showing question page and getting new set of questions
- */
+
+// showing question page and getting new set of questions
+ 
 
 restartButton.addEventListener('click', e => {
     loader();
@@ -261,14 +270,20 @@ restartButton.addEventListener('click', e => {
 });
 
 
-/**
- * showing game detail page to allow choice of new ammount of questions and changing name"
- */
+
+// showing game detail page to allow choice of new ammount of questions and changing name"
+
+
 goBackButton.addEventListener('click', e => {
     finalScorePageRef.classList.add('hide');
     gameDetailPageRef.classList.remove('hide');
     userScoreRef.innerText = 0
 });
+
+
+/**
+ * showing default text when new question is loading 
+ */
 
 const loader = () => {
     question.innerText = "Loading question...";
