@@ -33,6 +33,7 @@ const dropdownLevel = document.querySelector('#questionLevel')
 
 let score = 0;
 let questionNumber = 0;
+let bestUsername = localStorage.getItem('bestUsername');
 let bestScore = localStorage.getItem('bestScore');
 let currentQuestion = {};
 
@@ -201,8 +202,6 @@ choices.forEach(choice => {
                 //wrong answer selected
 
                 totalScoreRef.innerText = score;
-                let bestUsername = localStorage.getItem('bestUsername');
-                let bestScore = localStorage.getItem('bestScore');
                 bestUsernameRef.innerText = bestUsername;
                 bestScoreRef.innerText = bestScore;
                 enableAnswerButtons();
