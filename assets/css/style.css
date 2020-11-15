@@ -8,7 +8,7 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #fafafa;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .body-dark {
@@ -60,11 +60,11 @@ h3 {
 
 #question-text {
     font-size: 5rem;
-    padding: 50px;
+    padding: 5rem;
 }
 
 .grid {
-    padding: 50px;
+    padding: 2rem;
 }
 
 
@@ -116,7 +116,7 @@ h3 {
 /* @Media queries*/
 
 
-@media only screen and (max-width: 766px) {
+/*@media only screen and (max-width: 766px) {
     h1 {
         font-size: 4.5rem;
     }
@@ -142,7 +142,7 @@ h3 {
         font-size: 2rem;
     }
 
-}
+} */
 
 @media only screen and (min-width: 767px) {
 
@@ -150,9 +150,9 @@ h3 {
         padding-top: 120px;
     }
 
-    .grid {
+    /*.grid {
         padding: 45px;
-    }    
+    } */   
 
     .button {
         font-size: 3rem;
