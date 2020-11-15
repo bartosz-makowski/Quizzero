@@ -24,9 +24,9 @@ const restartButton = document.querySelector("#button-restart");
 const goBackButton = document.querySelector('#button-goback');
 
 const lightModeChanger = document.querySelector('#lightThemeChanger');
-const lightModeBtnRef = document.querySelector('#light_mode');
+const lightModeBtnRef = document.querySelector('#light-mode');
 const darkModeChanger = document.querySelector('#darkThemeChanger');
-const darkModeBtnRef = document.querySelector('#dark_mode')
+const darkModeBtnRef = document.querySelector('#dark-mode')
 
 const dropdownNumber = document.querySelector('#questionAmount')
 const dropdownLevel = document.querySelector('#questionLevel')
@@ -164,8 +164,6 @@ const newQuestion = () => {
 
         questionNumber++;
         questionOrder.innerText = questionNumber;
-        
-        
         const questionIndex = Math.floor(Math.random() * availableQ.length);
         currentQuestion = availableQ[questionIndex];
         question.innerHTML = currentQuestion['question'];
@@ -200,7 +198,6 @@ choices.forEach(choice => {
             if (selectedAnswer != currentQuestion.answer) {
 
                 //wrong answer selected
-
                 totalScoreRef.innerText = score;
                 bestUsernameRef.innerText = bestUsername;
                 bestScoreRef.innerText = bestScore;
@@ -209,7 +206,6 @@ choices.forEach(choice => {
             } else {
                 
                 // correct answer selected
-
                 score += 10;
                 userScoreRef.innerText = score;
                 enableAnswerButtons();
