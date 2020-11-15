@@ -33,18 +33,18 @@ The goal of this project is to provide the users with a fun and interactive quiz
 * Ability to input your name
 * Ability to see the best score
 * Ability to see the final score
-* ability to choose amount of question
+* ability to choose amount of questions
 * Visual feedback when correct answer is chosen
 * Visual feedback when incorrect answer is chosen
 * Visual interaction and feedback
 * Interact with the website on both Desktop tablet and mobile
 
 ## User stories 	:dart:
-* As a user I expect to type my name before starting the game
-* As a user I want to be able to select amount of my questions
-* As a user I want to be able to change from light to dark mode
-* As a user I want to be able to see when I choose the correct answer
-* As a user I expect to check my final score and my best score in the game session
+* As a user I expect to **type my name before starting the game**
+* As a user I want to be able to **select amount of my questions**
+* As a user I want to be able to **change from light to dark mode**
+* As a user I want to be able to **see when I choose the correct answer**
+* As a user I expect to **check my final score and my best score in the game session**
 
 ## Site Owner Goals	:dart:
 
@@ -114,14 +114,14 @@ I built the wireframes for this project using <a href="https://balsamiq.com/">Ba
 * [Font-Awesome](https://fontawesome.com/icons?d=gallery)
 * [Google Fonts](https://fonts.google.com/)
 * [Balsamiq](https://balsamiq.com/)
-* [Favicon generator](https://realfavicongenerator.net/)
 * [AmIresponsive](http://ami.responsivedesign.is/) - used to generate multi screen view of the webiste on different devices
 
 
 ### Testing :magnet:
 
 #### Plan
-
+During planning of this project it was certain I had to have a thorough testing plan in place. Thanks to organising the concept in the wireframes I was able to selcet which feature to work on. This allowed me to thoroughly test the implementation of each feature before moving on to the next task. The utilisation of developer tools in Google Chrome allowed me to test each feature and its behaviour on a different screen sizes. During the development proces this project was tested on various browsers and devices such as Chrome - desktop and mobile, Microsoft Edge - desktop, Mozilla Firefox - desktop, Safari - IPad Pro 9.7 and IPhone XS.
+I also tested HTML and CSS by using W3C markup validator and manualy test the game to see if it there is a possibility to brake it.
 
 #### Tests
 ##### Using W3C Markup Validator
@@ -180,3 +180,5 @@ Cloning Quizzero from GitHub:
 https://github.com/bartosz-makowski/Quizzero.git
 ```
 ### Acknowledgements :clap:
+* My mentor [Eventyret](www.github.com/Eventyret) for support and priceless feedback regarding this project and allowing me to use his boilerplate [!bcdn](https://marketplace.visualstudio.com/items?itemName=eventyret.bootstrap-4-cdn-snippet)
+* [James Q Quick](https://github.com/jamesqquick) [You Tube tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) that I used as an ispiration and base for this project
