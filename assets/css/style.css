@@ -39,7 +39,7 @@ h3 {
 #darkThemeChanger, #lightThemeChanger {
     margin-top: 20px;
     font-size: 1.6rem;
-    padding: 7px;
+    padding: 0.7rem;
 }
 
  
@@ -75,7 +75,7 @@ h3 {
     background-color: #FF7F11;
     border-radius: 5px;
     border: 1px solid #FF8011C5;
-    padding: 30px 50px;
+    padding: 3rem 5rem;
     font-size: 2.3rem;
     color: #000;
 }
@@ -122,12 +122,8 @@ h3 {
         font-size: 4.5rem;
     }
     #question {
-        padding-top: 120px;
-    }
-
-    /*.grid {
-        padding: 45px;
-    } */   
+        padding-top: 12rem;
+    }  
 
     .button {
         font-size: 3rem;
