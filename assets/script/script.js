@@ -101,8 +101,10 @@ username.addEventListener('keyup', () => {
 });
 
 
-//Fetch API request
-
+/**
+ * Fetch API request
+ * get options from dropdown menus
+*/
 
 const getAPI = () => {
     let selectedLevel = dropdownLevel.options[dropdownLevel.selectedIndex].value;
